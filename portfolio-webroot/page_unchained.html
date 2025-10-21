@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jacob Scott | Unchained: Tale of Enra</title>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="Child page of Jacob Scott's 2025 portfolio site. Contains detailed information about his contributions to 'Unchained: Tale of Enra', a tactical RPG where players can choose to make peace with enemies in turn-based battles.">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Jacob Scott">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="lightbox2/dist/css/lightbox.min.css">
+        <Link rel="stylesheet" href="main.css">
+        <script src="components/navbar.js" defer></script>
+
+        <style>
+            #unchained-background {
+                margin: 0;
+                height: 300%;
+                width: 100%;
+                background-image: url('img/unchained.avif');
+                background-size: cover;
+                background-position: center;
+                padding-top: 5px;
+                padding-bottom: 30px;
+                text-align: center;
+                font-size: 3.2em;
+                text-shadow: 0px 0px 15px #000;
+                color: white;
+            }
+
+            #wrapper1 {
+                display: flex;
+                flex-direction: flex-start;
+                justify-content: center;
+            }
+            
+            #unchained-main {
+                background-color: white;
+                opacity: 0.9;
+                text-align: left;
+                padding: 50px;
+                height: 100%;
+                width: 66%;
+                margin-bottom: 0px;
+            }
+
+            #image-wrapper {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 70px;
+            }
+
+            .image > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .image {
+                height: 300px;
+                width: 400px;
+                background-color: #2a2a2a;
+                color: white;
+                text-align: center;
+                margin-right: 100px;
+                margin-left: 100px;
+                margin-bottom: 70px;
+                object-fit: cover;
+            }
+
+            #contribution {
+                text-align: center;
+                color: white;
+                height: 100px;
+                background-color: black;
+                padding-top: 5px;
+                font-size: 1.2em;
+            }
+
+            #cont-wrapper {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 70px;
+            }
+
+            .cont {
+                height: 500px;
+                width: 700px;
+                background-color: #2a2a2a;
+                color: white;
+                text-align: center;
+                margin-right: 100px;
+                margin-left: 100px;
+                margin-bottom: 70px;
+                object-fit: cover;
+            }
+
+            a > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .cont > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav-bar></nav-bar>
+
+        <div id="bluetop"></div>
+
+        <div id="unchained-background">
+            <h1>Unchained: Tale of Enra</h1>
+        </div>
+
+        <div id="wrapper1">
+            <div id="unchained-main">
+                <h2>Unchained: Tale of Enra</h2>
+                <p></p>
+                <p>August 2024 - Present</p>
+                <p></p>
+                <p>Role: Lead Designer</p>
+                <p>Unchained: Tale of Enra is a tactical RPG that reimagines traditional turn-based combat by introducing a unique peace system. Players can choose to either defeat their enemies in traditional tactical combat or attempt to make peace with them through careful positioning and dialogue choices. Each approach offers different rewards and impacts the story's progression, creating a rich, branching narrative experience.</p>
+                <p></p>
+                <p><strong>Contributions</strong></p>
+                <p></p>
+                <ul>
+                    <li>Led the design team in developing and implementing the core peace-making mechanics</li>
+                    <p></p>
+                    <li>Created and balanced the tactical combat system, including unit stats, abilities, and movement rules</li>
+                    <p></p>
+                    <li>Designed the dialogue system that integrates with the peace-making mechanics</li>
+                    <p></p>
+                    <li>Worked closely with the narrative team to ensure gameplay mechanics supported the story themes</li>
+                    <p></p>
+                    <li>Developed and maintained the game design document (GDD)</li>
+                    <p></p>
+                    <li>Conducted regular playtesting sessions and implemented feedback-driven improvements</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="image-wrapper">
+            <!-- Placeholder for actual game screenshots -->
+            <div class="image">
+                <a href="img/Unchained_Logo.png" data-lightbox="images" data-title="Unchained: Tale of Enra Logo">
+                    <img src="img/Unchained_Logo.png" alt="Unchained Logo">
+                </a>
+            </div>
+        </div>
+
+        <div id="contribution">
+            <h2>Design Elements</h2>
+        </div>
+
+        <div id="footer">
+            <p>Copyright © 2025 by Jacob Scott | All images, logos and names are used with permission</p>
+        </div>
+
+        <!--jQuery Library-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+        <!--Lightbox Plugin-->
+        <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.getElementById('top-menu').classList.toggle('active');
+            });
+        </script>
+    </body>
+</html>
