@@ -9,7 +9,7 @@ class NavBar extends HTMLElement {
                     <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
                     <li><a href="">Professional Projects</a>
                         <ul class="sub-menu">
-                            <li><a href="page_coming_soon.html">Unchained</a></li>
+                            <li><a href="page_unchained.html">Unchained</a></li>
                             <li><a href="page_bugnauts.html">Bugnauts!</a></li>
                         </ul>
                     </li>                    <li><a href="">Personal Projects</a>
