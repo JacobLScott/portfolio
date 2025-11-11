@@ -145,7 +145,7 @@
             }
 
             .cont {
-                height: 500px;
+                /* height: 500px; */
                 width: 700px;
                 background-color: rgb(17, 115, 79);
                 color: white;
@@ -282,7 +282,12 @@
                 <a href="img/pattern_design.PNG" data-lightbox="images" data-title="">
                     <img src="img/pattern_design.PNG" alt="bullet pattern">
                   </a>
-                <h3>A preview of one of the many enemy attack patterns</h3>
+                                    <h3 id="dropdown-trigger" style="cursor:pointer;">The creation of enemy attack patterns</h3>
+                                    <div id="dropdown-content" style="display:none; background-color:#155c3b; color:white; padding:15px; margin-top:10px; border-radius:8px;">
+                                        <strong>How the tool works:</strong><br>
+                                        This tool allows designers to visually create and tweak enemy bullet attack patterns in real time. By adjusting parameters such as bullet speed, direction, spread, and timing, designers can quickly iterate and test different attack behaviors. The preview image above shows a sample pattern generated using this system, which was implemented in Unreal Engine using Blueprints. The tool streamlines the process of designing challenging and engaging enemy encounters.
+                                        
+                                    </div>
             </div>
 
         </div>
@@ -304,8 +309,24 @@
         <!--Lightbox Plugin-->
         <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
         <script>
-            document.querySelector('.menu-toggle').addEventListener('click', function() {
-                document.getElementById('top-menu').classList.toggle('active');
+            document.addEventListener('DOMContentLoaded', function() {
+                var menuToggle = document.querySelector('.menu-toggle');
+                if (menuToggle) {
+                    menuToggle.addEventListener('click', function() {
+                        document.getElementById('top-menu').classList.toggle('active');
+                    });
+                }
+                var dropdownTrigger = document.getElementById('dropdown-trigger');
+                if (dropdownTrigger) {
+                    dropdownTrigger.addEventListener('click', function() {
+                        var content = document.getElementById('dropdown-content');
+                        if (content.style.display === 'none') {
+                            content.style.display = 'block';
+                        } else {
+                            content.style.display = 'none';
+                        }
+                    });
+                }
             });
         </script>
     </body>

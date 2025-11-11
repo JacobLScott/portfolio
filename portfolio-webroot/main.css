@@ -1,3 +1,13 @@
+/* Dropdown for attack pattern description */
+#dropdown-content {
+    margin-bottom: 40px;
+    background-color: #155c3b;
+    color: white;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: none;
+}
 body{
     margin: 0px;
     background-color: #0c2c5e;
@@ -160,7 +170,6 @@ body{
 #footer{
     margin: 0px;
     width: auto;
-    height: 40px;
     background-color: grey;
     padding-top: 1px;
     padding-bottom: 15px;

@@ -16,8 +16,23 @@
             /* Keep layout similar to index.html for now */
             body { font-family: 'Gowun Dodum', sans-serif; color: white; margin: 0; }
             #bluetop { height: 20px; background: #0c2c5e; }
-            #hero { text-align: center; padding: 3rem 1rem; background: #071432; }
-            #hero h1 { margin: 0; font-size: 2.2rem; }
+            /* hero uses map image with dark overlay so title appears on top */
+            #hero { 
+                text-align: center; 
+                /* reduced padding ~25% */
+                padding: 3.75rem 1rem; 
+                background-image: linear-gradient(rgba(7,20,50,0.55), rgba(7,20,50,0.55)), url('img/fe/fea_map.jpg');
+                background-size: cover;
+                background-position: center;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* reduced min-height ~25% */
+                min-height: 270px;
+            }
+            /* reduced title size ~25% */
+            #hero h1 { margin: 0; font-size: 2.0rem; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); }
             #intro { padding: 2rem 15%; background: #0c2c5e; text-align: center; }
             #content-wrapper { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
             .card { background: #1b1b1b; padding: 1.25rem; border-radius: 10px; margin-bottom: 1rem; }
@@ -27,6 +42,8 @@
             .platform-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: start; }
             .project-image { flex: 1; min-width: 280px; max-width: 350px; height: 300px; background-color: #1a1a1a; color: white; text-align: center; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
             .project-image > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+            /* Adjust specific image positions when the focal point needs nudging */
+            .project-image > img.img-3ds { object-position: center 22%; }
             .project-overlay { position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.85)); color: white; opacity: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; text-align: center; transition: all 0.3s ease; }
             .project-image:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
             .project-image:hover .project-overlay { opacity: 1; }
@@ -58,7 +75,7 @@
                         <h2>Switch Titles</h2>
                         <div class="project-row">
                             <div class="project-image">
-                                <img src="img/fe_mod.JPG" alt="Switch - placeholder" loading="lazy">
+                                <img src="img/fe/fire-emblem-engage-keyart-1024x576.jpg" alt="Fire Emblem Engage (Switch)" loading="lazy">
                                 <a href="page_fireEmblemModding_switch.html" class="project-overlay">
                                     <h3>Switch Titles</h3>
                                     <p>Placeholder — click to open Switch mods page</p>
@@ -71,7 +88,7 @@
                         <h2>GBA Titles</h2>
                         <div class="project-row">
                             <div class="project-image">
-                                <img src="img/fe_mod.JPG" alt="GBA - placeholder" loading="lazy">
+                                <img src="img/fe/Fire_Emblem_The_Sacred_Stones_box_art.webp" alt="Fire Emblem: The Sacred Stones (GBA)" loading="lazy">
                                 <a href="page_fireEmblemModding_gba.html" class="project-overlay">
                                     <h3>GBA Titles</h3>
                                     <p>Placeholder — click to open GBA mods page</p>
@@ -84,7 +101,7 @@
                         <h2>3DS Titles</h2>
                         <div class="project-row">
                             <div class="project-image">
-                                <img src="img/fe_mod.JPG" alt="3DS - placeholder" loading="lazy">
+                                <img class="img-3ds" src="img/fe/fire-emblem-fates-button-03jpg-434ea3.jpg" alt="Fire Emblem Fates (3DS)" loading="lazy">
                                 <a href="page_fireEmblemModding_3ds.html" class="project-overlay">
                                     <h3>3DS Titles</h3>
                                     <p>Placeholder — click to open 3DS mods page</p>
@@ -97,7 +114,7 @@
                         <h2>DS Titles</h2>
                         <div class="project-row">
                             <div class="project-image">
-                                <img src="img/fe_mod.JPG" alt="DS - placeholder" loading="lazy">
+                                <img src="img/fe/New_Mystery_of_the_Emblem_box_art.webp" alt="New Mystery of the Emblem (DS)" loading="lazy">
                                 <a href="page_fireEmblemModding_ds.html" class="project-overlay">
                                     <h3>DS Titles</h3>
                                     <p>Placeholder — click to open DS mods page</p>
