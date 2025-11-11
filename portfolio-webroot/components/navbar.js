@@ -16,7 +16,7 @@ class NavBar extends HTMLElement {
                         <ul class="sub-menu">                            <li><a href="page_chimken_crusade.html">Chimken Crusade</a></li>
                             <li><a href="page_rps.html">Rock, Paper, Scissors, Shoot!</a></li>
                             <li><a href="page_level_design.html">Level Design</a></li>
-                            <li><a href="page_coming_soon.html">Reverse Engineering Fire Emblem</a></li>
+                            <li><a href="page_fireEmblemModding.html">Reverse Engineering Fire Emblem</a></li>
                         </ul>
                     </li>
                     <li><a href="page_resume.html">Resume</a></li>

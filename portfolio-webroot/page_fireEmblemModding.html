@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jacob Scott | Fire Emblem Modding</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Showcase of custom edits and mods made to Fire Emblem titles across platforms.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+        <Link rel="stylesheet" href="main.css">
+        <script src="components/navbar.js" defer></script>
+
+        <style>
+            /* Keep layout similar to index.html for now */
+            body { font-family: 'Gowun Dodum', sans-serif; color: white; margin: 0; }
+            #bluetop { height: 20px; background: #0c2c5e; }
+            #hero { text-align: center; padding: 3rem 1rem; background: #071432; }
+            #hero h1 { margin: 0; font-size: 2.2rem; }
+            #intro { padding: 2rem 15%; background: #0c2c5e; text-align: center; }
+            #content-wrapper { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+            .card { background: #1b1b1b; padding: 1.25rem; border-radius: 10px; margin-bottom: 1rem; }
+            /* project tiles (index-like) */
+            .project-row { display: flex; align-items: stretch; justify-content: center; flex-wrap: wrap; gap: 2rem; margin: 1rem 0; }
+            /* two-column platform grid */
+            .platform-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: start; }
+            .project-image { flex: 1; min-width: 280px; max-width: 350px; height: 300px; background-color: #1a1a1a; color: white; text-align: center; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+            .project-image > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+            .project-overlay { position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.85)); color: white; opacity: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; text-align: center; transition: all 0.3s ease; }
+            .project-image:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
+            .project-image:hover .project-overlay { opacity: 1; }
+            a { color: white; }
+            ul.platforms { margin-left: 1.25rem; }
+            @media (max-width: 768px) { #intro { padding: 1.5rem; } }
+        </style>
+    </head>
+
+    <body>
+        <nav-bar></nav-bar>
+        <div id="bluetop"></div>
+
+        <section id="hero">
+            <h1>Reverse Engineering Fire Emblem</h1>
+            <p style="max-width:900px;margin:0.5rem auto;">A collection of custom edits, maps, and systems built across multiple Fire Emblem titles to alter balance and add new content.</p>
+        </section>
+
+        <section id="intro">
+            <div id="content-wrapper">
+                <div class="card">
+                    <h2>Overview</h2>
+                    <p>This page will showcase the custom mechanics, maps, characters, and skills I've created while modding Fire Emblem titles across platforms (GBA, DS, 3DS, Switch). For now this page mirrors the general layout of the homepage and will be expanded with screenshots, patch notes, and downloadable builds.</p>
+                </div>
+
+                <!-- Platform sections arranged in a two-column grid; top row: Switch + GBA -->
+                <div class="platform-grid">
+                    <div class="card">
+                        <h2>Switch Titles</h2>
+                        <div class="project-row">
+                            <div class="project-image">
+                                <img src="img/fe_mod.JPG" alt="Switch - placeholder" loading="lazy">
+                                <a href="page_fireEmblemModding_switch.html" class="project-overlay">
+                                    <h3>Switch Titles</h3>
+                                    <p>Placeholder — click to open Switch mods page</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2>GBA Titles</h2>
+                        <div class="project-row">
+                            <div class="project-image">
+                                <img src="img/fe_mod.JPG" alt="GBA - placeholder" loading="lazy">
+                                <a href="page_fireEmblemModding_gba.html" class="project-overlay">
+                                    <h3>GBA Titles</h3>
+                                    <p>Placeholder — click to open GBA mods page</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2>3DS Titles</h2>
+                        <div class="project-row">
+                            <div class="project-image">
+                                <img src="img/fe_mod.JPG" alt="3DS - placeholder" loading="lazy">
+                                <a href="page_fireEmblemModding_3ds.html" class="project-overlay">
+                                    <h3>3DS Titles</h3>
+                                    <p>Placeholder — click to open 3DS mods page</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2>DS Titles</h2>
+                        <div class="project-row">
+                            <div class="project-image">
+                                <img src="img/fe_mod.JPG" alt="DS - placeholder" loading="lazy">
+                                <a href="page_fireEmblemModding_ds.html" class="project-overlay">
+                                    <h3>DS Titles</h3>
+                                    <p>Placeholder — click to open DS mods page</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="footer" style="margin-top:2rem;padding:2rem;text-align:center;background:#071432;">
+            <p>Copyright © 2025 by Jacob Scott | All images, logos and names are used with permission</p>
+        </div>
+
+        <script>
+            // mobile menu toggle (same as index)
+            const toggle = document.querySelector('.menu-toggle');
+            if (toggle) toggle.addEventListener('click', function() { document.getElementById('top-menu').classList.toggle('active'); });
+        </script>
+    </body>
+</html>
