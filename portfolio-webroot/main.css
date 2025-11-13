@@ -1,12 +1,62 @@
 /* Dropdown for attack pattern description */
-#dropdown-content {
-    margin-bottom: 40px;
-    background-color: #155c3b;
-    color: white;
-    padding: 15px;
-    margin-top: 10px;
+.dropdown-content {
+    margin-bottom: 0; /* don't reserve space when closed */
+    background-color: #c75a4e; /* pale red */
+    color: #000; /* dark text for contrast */
+    padding: 10px 15px; /* reduce vertical padding so closed header is smaller */
+    margin-top: 6px; /* small gap from trigger */
     border-radius: 8px;
-    display: none;
+    /* prepare for smooth slide-down */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 360ms ease, opacity 240ms ease;
+    display: block; /* remain in flow so layout expands */
+}
+
+.dropdown-content.open {
+    opacity: 1;
+    /* allow enough room for typical content; JS will set exact max-height when opening */
+    max-height: 600px;
+    margin-bottom: 24px; /* add spacing only when open (smaller than before) */
+}
+
+/* Clickable trigger with a + marker on the left */
+.dropdown-trigger {
+    cursor: pointer;
+    position: relative;
+    padding-left: 44px; /* room for the plus */
+    display: block; /* span full width of parent card */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #c75a4e; /* match dropdown pale red */
+    color: #000; /* dark text for contrast */
+    padding: 8px 12px 8px 44px; /* smaller vertical padding */
+    height: 36px; /* fixed compact height */
+    /* no full rounding here — the container .cont.card-red will provide the rounded corners */
+    border-radius: 0 0 10px 10px;
+    margin-top: 8px; /* small gap between image and card header */
+    text-align: left;
+    display: flex;
+    align-items: center; /* vertically center the text */
+}
+.dropdown-trigger::before {
+    content: "+";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    color: #c75a4e; /* plus color */
+    background: #fff; /* white pill behind the plus for contrast */
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+.dropdown-trigger.open::before {
+    content: "−";
 }
 body{
     margin: 0px;

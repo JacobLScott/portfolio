@@ -155,6 +155,65 @@
                 margin-bottom: 70px;
                 object-fit: cover;
             }
+            /* specific red card to match dropdown */
+            .cont.card-red {
+                background-color: #c75a4e;
+                color: #000;
+                border-radius: 10px; /* rounded card corners */
+                overflow: hidden; /* clip inner image/content to rounded corners */
+                box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+            }
+
+            /* Dropdown trigger hover/focus styles (visual affordance) */
+            .dropdown-trigger {
+                position: relative;
+                cursor: pointer;
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                background-color: #c75a4e;
+                color: #000;
+                padding: 12px 16px 12px 64px; /* larger padding for bigger hit area */
+                height: 52px; /* taller button */
+                font-size: 1.05rem; /* slightly larger text */
+                border-radius: 0 0 12px 12px;
+                display: flex;
+                align-items: center;
+                transition: background-color 200ms ease, color 200ms ease, transform 120ms ease;
+            }
+            .dropdown-trigger::before {
+                content: "+";
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-weight: 700;
+                color: #c75a4e;
+                background: #fff;
+                width: 28px; /* larger pill */
+                height: 28px;
+                line-height: 28px;
+                font-size: 1.05rem;
+                text-align: center;
+                border-radius: 6px;
+                transition: background-color 200ms ease, color 200ms ease, transform 120ms ease;
+            }
+            .dropdown-trigger.open::before { content: "−"; }
+            .dropdown-trigger:hover {
+                /* darken the card background slightly on hover as the primary affordance */
+                background-color: #b24b43; /* slightly darker than #c75a4e */
+                filter: none;
+                transform: none;
+                box-shadow: none;
+            }
+            .dropdown-trigger:hover::before {
+                background: #f3f3f3; /* subtle pill background change */
+                color: #b24b43; /* match the darker header on hover */
+            }
+            .dropdown-trigger:focus-visible {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(199,90,78,0.18);
+            }
 
             a > img {
                 width: 100%;
@@ -272,22 +331,24 @@
 
         <div id="cont-wrapper">
 
-            <div class="cont">
-                <a href="img/behavior_tree.PNG" data-lightbox="images" data-title="">
-                    <img src="img/behavior_tree.PNG" alt="Behavior Tree">
-                  </a>
-                <h3>A section of an enemy bug's AI tree</h3>
-            </div>
-            <div class="cont">
+                        <div class="cont card-red">
+                                <a href="img/behavior_tree.PNG" data-lightbox="images" data-title="">
+                                        <img src="img/behavior_tree.PNG" alt="Behavior Tree">
+                                    </a>
+                            <h3 class="dropdown-trigger" aria-expanded="false">A section of an enemy bug's AI tree</h3>
+                                <div class="dropdown-content">
+                                        <em>Placeholder:</em> Details about this AI behavior tree will go here. (Add explanatory text about behavior tree structure, nodes, and high-level logic.)
+                                </div>
+                        </div>
+                        <div class="cont card-red">
                 <a href="img/pattern_design.PNG" data-lightbox="images" data-title="">
                     <img src="img/pattern_design.PNG" alt="bullet pattern">
                   </a>
-                                    <h3 id="dropdown-trigger" style="cursor:pointer;">The creation of enemy attack patterns</h3>
-                                    <div id="dropdown-content" style="display:none; background-color:#155c3b; color:white; padding:15px; margin-top:10px; border-radius:8px;">
-                                        <strong>How the tool works:</strong><br>
-                                        This tool allows designers to visually create and tweak enemy bullet attack patterns in real time. By adjusting parameters such as bullet speed, direction, spread, and timing, designers can quickly iterate and test different attack behaviors. The preview image above shows a sample pattern generated using this system, which was implemented in Unreal Engine using Blueprints. The tool streamlines the process of designing challenging and engaging enemy encounters.
-                                        
-                                    </div>
+                    <h3 class="dropdown-trigger" aria-expanded="false">The creation of enemy attack patterns</h3>
+                    <div class="dropdown-content">
+                        <strong>How the tool works:</strong><br>
+                        This tool allows designers to visually create and tweak enemy bullet attack patterns in real time. By adjusting parameters such as bullet speed, direction, spread, and timing, designers can quickly iterate and test different attack behaviors. The preview image above shows a sample pattern generated using this system, which was implemented in Unreal Engine using Blueprints. The tool streamlines the process of designing challenging and engaging enemy encounters.
+                    </div>
             </div>
 
         </div>
@@ -316,17 +377,42 @@
                         document.getElementById('top-menu').classList.toggle('active');
                     });
                 }
-                var dropdownTrigger = document.getElementById('dropdown-trigger');
-                if (dropdownTrigger) {
-                    dropdownTrigger.addEventListener('click', function() {
-                        var content = document.getElementById('dropdown-content');
-                        if (content.style.display === 'none') {
-                            content.style.display = 'block';
+                // wire up any dropdown triggers on the page
+                var triggers = document.querySelectorAll('.dropdown-trigger');
+                triggers.forEach(function(trigger) {
+                    trigger.addEventListener('click', function() {
+                        var content = trigger.nextElementSibling;
+                        if (!content) return;
+                        var isOpen = content.classList.contains('open');
+                        if (!isOpen) {
+                            // open: add class to enable visible styles, set explicit maxHeight to allow transition
+                            content.classList.add('open');
+                            trigger.classList.add('open');
+                            trigger.setAttribute('aria-expanded', 'true');
+                            // set to scrollHeight so the max-height transition can expand to the exact height
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            // when transition finishes, remove the inline maxHeight so it can grow/shrink naturally
+                            var onOpenEnd = function(e) {
+                                if (e.propertyName === 'max-height') {
+                                    content.style.maxHeight = null;
+                                    content.removeEventListener('transitionend', onOpenEnd);
+                                }
+                            };
+                            content.addEventListener('transitionend', onOpenEnd);
                         } else {
-                            content.style.display = 'none';
+                            // close: set maxHeight to current height, force reflow, then collapse
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            // force reflow so the browser acknowledges the starting height
+                            void content.offsetHeight;
+                            // remove the open class so opacity transitions to 0
+                            content.classList.remove('open');
+                            // then collapse height to zero
+                            content.style.maxHeight = '0px';
+                            trigger.classList.remove('open');
+                            trigger.setAttribute('aria-expanded', 'false');
                         }
                     });
-                }
+                });
             });
         </script>
     </body>
