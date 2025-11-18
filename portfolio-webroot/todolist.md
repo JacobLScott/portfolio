@@ -2,6 +2,10 @@
 
 ## Tasks for page_bugnauts.html
 
+- [ ] Add gameplay gif from old portolio
+  - Locate old portfolio and copy the gif to the new one
+  - Determine where on the page it should be showcased
+
 - [ ] Add existing design documents
   - Locate and gather all design documents related to Bugnauts
   - Determine which documents are relevant to showcase

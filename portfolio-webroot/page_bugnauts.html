@@ -215,6 +215,29 @@
                 box-shadow: 0 0 0 3px rgba(199,90,78,0.18);
             }
 
+            /* Dropdown content styles - hidden by default, shown when .open class is added */
+            .dropdown-content {
+                margin-bottom: 0;
+                background-color: #c75a4e; /* pale red */
+                color: #000; /* dark text for contrast */
+                padding: 10px 15px;
+                margin-top: 6px;
+                border-radius: 8px;
+                /* prepare for smooth slide-down */
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 360ms ease, opacity 240ms ease;
+                display: block; /* remain in flow so layout expands */
+            }
+
+            .dropdown-content.open {
+                opacity: 1;
+                /* allow enough room for typical content; JS will set exact max-height when opening */
+                max-height: 600px;
+                margin-bottom: 24px; /* add spacing only when open */
+            }
+
             a > img {
                 width: 100%;
                 height: 100%;
@@ -273,19 +296,7 @@
 
         </div> <!--wrapper1-->
 
-        <div id="steam-wrapper">
-
-            <div id="steam">
-
-                <h2>Play for yourself on Steam!</h2>
-
-                <img src="img/steam_logo.png" alt="Steam logo">                <a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank" class="overlay">
-                    <h3>Play Now!</h3>
-                </a>
-    
-            </div>
-
-        </div> <!--steam-wrapper-->
+        
 
         <div id="image-wrapper">
 
@@ -323,6 +334,20 @@
 
         </div>
 
+        <div id="steam-wrapper">
+
+            <div id="steam">
+
+                <h2>Play for yourself on Steam!</h2>
+
+                <img src="img/steam_logo.png" alt="Steam logo">                <a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank" class="overlay">
+                    <h3>Play Now!</h3>
+                </a>
+    
+            </div>
+
+        </div> <!--steam-wrapper-->
+
         <div id="contribution">
 
             <h2>Contributions</h2>
@@ -332,22 +357,49 @@
         <div id="cont-wrapper">
 
                         <div class="cont card-red">
+                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Early Level Design</p>
+                <a href="img/bugnaut_earlyleveldesign.JPG" data-lightbox="images" data-title="">
+                    <img src="img/bugnaut_earlyleveldesign.JPG" alt="placeholder">
+                  </a>
+                    <h3 class="dropdown-trigger" aria-expanded="false">Using 2D diagrams for a 3D game</h3>
+                    <div class="dropdown-content">
+                        Despite working in a 3D engine to create a 3D game, I and my fellow designers used 2D top-down diagrams to form early versions of our levels. This helped us get a general sense of the space our players would be in and where certain mechanics would be taught. It also allowed us to make better use of the space as we started to greybox and blockout the level in engine.
+                        <br><br>
+                        <img src="img/bugnaut_tutorialblockout.JPG" alt="level design placeholder" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
+                    </div>
+            </div>
+                        <div class="cont card-red">
+                                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Behavior Trees</p>
                                 <a href="img/behavior_tree.PNG" data-lightbox="images" data-title="">
                                         <img src="img/behavior_tree.PNG" alt="Behavior Tree">
                                     </a>
-                            <h3 class="dropdown-trigger" aria-expanded="false">A section of an enemy bug's AI tree</h3>
+                            <h3 class="dropdown-trigger" aria-expanded="false">Allowed for quick iterations and changes to Enemy AI</h3>
                                 <div class="dropdown-content">
-                                        <em>Placeholder:</em> Details about this AI behavior tree will go here. (Add explanatory text about behavior tree structure, nodes, and high-level logic.)
+                                    With the help of Behavior Trees I and my fellow designers were able to quickly change and iterate on enemy behavior to create more varied combat challenges for the player. Once we were happy with a particular enemy type's behavior we could make variations of it by switching around the order and positions of nodes on a copy of the tree to make enemy behavior seem more complex than it actually was. It was incredibly useful for helping us decide when a specific attack pattern should be fired at.
+                                    <br><br>
+                                    <img src="img/bugnaut_beetlebehavior.JPG" alt="Behavior Tree (detail)" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
                                 </div>
                         </div>
                         <div class="cont card-red">
+                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Attack Patterns</p>
                 <a href="img/pattern_design.PNG" data-lightbox="images" data-title="">
                     <img src="img/pattern_design.PNG" alt="bullet pattern">
                   </a>
                     <h3 class="dropdown-trigger" aria-expanded="false">The creation of enemy attack patterns</h3>
                     <div class="dropdown-content">
-                        <strong>How the tool works:</strong><br>
-                        This tool allows designers to visually create and tweak enemy bullet attack patterns in real time. By adjusting parameters such as bullet speed, direction, spread, and timing, designers can quickly iterate and test different attack behaviors. The preview image above shows a sample pattern generated using this system, which was implemented in Unreal Engine using Blueprints. The tool streamlines the process of designing challenging and engaging enemy encounters.
+                        This tool, created by one of the engineers on the project allowed designers to create and tweak enemy bullet attack patterns. By adjusting parameters such as bullet speed, direction, spread, and timing, I was able to quickly iterate on attacks that would test the player's movement capabilities. The image above would show me what bullet type was selected, the number of shots in each 'attack' as well as the time between each 'attack'. This pattern was then attached to a node on the behavior tree and ended up being an attack of the Grunt Beetle enemy. 
+                        <br><br>
+                        <img src="img/bugnaut_beetlebehavior.JPG" alt="Attack Pattern (detail)" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
+                    </div>
+            </div>
+            <div class="cont card-red">
+                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Placeholder Section</p>
+                <a href="img/environ.jpg" data-lightbox="images" data-title="">
+                    <img src="img/environ.jpg" alt="placeholder">
+                  </a>
+                    <h3 class="dropdown-trigger" aria-expanded="false">Click to learn more</h3>
+                    <div class="dropdown-content">
+                        <em>Placeholder:</em> This is a new contribution section with placeholder content. Replace this text and image with your own content.
                     </div>
             </div>
 
