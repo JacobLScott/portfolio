@@ -250,6 +250,27 @@
                 object-fit: cover;
             }
 
+            /* Design Documents link icon */
+            .dropdown-content a.doc-link {
+                color: inherit;
+                text-decoration: none;
+                font-weight: 700;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .dropdown-content a.doc-link .affordance-icon {
+                width: 18px;
+                height: 18px;
+                flex: 0 0 18px;
+                stroke: currentColor;
+                fill: none;
+                stroke-width: 1.5;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+            .dropdown-content a.doc-link:hover { text-decoration: underline; }
+
         </style>
 
     </head>
@@ -264,6 +285,20 @@
 
         </div>
 
+        <div id="steam-wrapper">
+
+            <div id="steam">
+
+                <h2>Play for yourself on Steam!</h2>
+
+                <img src="img/steam_logo.png" alt="Steam logo">                <a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank" class="overlay">
+                    <h3>Play Now!</h3>
+                </a>
+    
+            </div>
+
+        </div> <!--steam-wrapper-->
+
         <div id="wrapper1">
 
             <div id="bugnaut-main">
@@ -271,7 +306,7 @@
                 <h2>Bugnauts!</h2>
     
                 <p></p>
-                <p>April 2023 - May 2025</p>
+                <p>April 2023 - May 2024</p>
                 <p></p>
                 <p>Role: Designer</p>
                 <p>Bugnauts! is a single-player third-person action game that mixes accessible 3D projectile gameplay with environmental education. Players play as Chloe, a young aspiring entomologist who must use her bug net to defeat the giant Phantom Bugs that have overtaken the island she calls home. Bugnauts! is a finished project developed in Unreal Engine 5 as a capstone project at USC.</p>
@@ -281,7 +316,7 @@
                 <ul>
                     <li>Worked cooperatively on a team of 40+ with 2 other designers to create a game for AGP, USC's capstone project class.</li>
                     <p></p>
-                    <li>Wrote numerous design documents for enemies, mechanics, and combat features</li>
+                    <li>Greyboxed early forms of levels within the game</li>
                     <p></p>
                     <li>Prototyped and implemented mechanics and enemy features using Unreal Engine's Blueprint system</li>
                     <p></p>
@@ -289,7 +324,7 @@
                     <p></p>
                     <li>Created and tweaked the majority of enemy bugs' bullet attack patterns within the game</li>
                     <p></p>
-                    <li>Greyboxed early forms of levels within the game</li>
+                    <li>Created design documents for enemies, mechanics, and combat features</li>
                 </ul>
     
             </div>
@@ -297,6 +332,7 @@
         </div> <!--wrapper1-->
 
         
+
 
         <div id="image-wrapper">
 
@@ -333,20 +369,6 @@
             </div>
 
         </div>
-
-        <div id="steam-wrapper">
-
-            <div id="steam">
-
-                <h2>Play for yourself on Steam!</h2>
-
-                <img src="img/steam_logo.png" alt="Steam logo">                <a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank" class="overlay">
-                    <h3>Play Now!</h3>
-                </a>
-    
-            </div>
-
-        </div> <!--steam-wrapper-->
 
         <div id="contribution">
 
@@ -393,13 +415,23 @@
                     </div>
             </div>
             <div class="cont card-red">
-                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Placeholder Section</p>
-                <a href="img/environ.jpg" data-lightbox="images" data-title="">
-                    <img src="img/environ.jpg" alt="placeholder">
+                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Design Documents</p>
+                <a href="img/bugnaut_designdocuments.JPG" data-lightbox="images" data-title="">
+                    <img src="img/bugnaut_designdocuments.JPG" alt="placeholder">
                   </a>
-                    <h3 class="dropdown-trigger" aria-expanded="false">Click to learn more</h3>
+                    <h3 class="dropdown-trigger" aria-expanded="false">The importance of Documentation</h3>
                     <div class="dropdown-content">
-                        <em>Placeholder:</em> This is a new contribution section with placeholder content. Replace this text and image with your own content.
+                        <em>
+                            <a class="doc-link" href="page_bugnauts_designdocuments.html" aria-label="Open Bugnauts design documents">
+                                <svg class="affordance-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                    <path d="M6 2h7l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" />
+                                    <path d="M13 2v6h6" />
+                                </svg>
+                                Featured Design Documents
+                            </a>
+                        </em>
+                        <p></p>
+                        While not the most exciting thing in the world, writing and documenting our ideas was often how a feature got approved for implementation. It was very fun to discuss these with other designers on the team and it helped refine our ideas that were presented on these documents. Additionally, the engineers would not have much to go off of for implementation of a feature without these docs.
                     </div>
             </div>
 
