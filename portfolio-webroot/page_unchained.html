@@ -173,6 +173,89 @@
                 height: 100%;
                 object-fit: cover;
             }
+
+            /* specific red card to match dropdown */
+            .cont.card-red {
+                background-color: #c75a4e;
+                color: #000;
+                border-radius: 10px; /* rounded card corners */
+                overflow: hidden; /* clip inner image/content to rounded corners */
+                box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+            }
+
+            /* Dropdown trigger hover/focus styles (visual affordance) */
+            .dropdown-trigger {
+                position: relative;
+                cursor: pointer;
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                background-color: #c75a4e;
+                color: #000;
+                padding: 12px 16px 12px 64px; /* larger padding for bigger hit area */
+                height: 52px; /* taller button */
+                font-size: 1.05rem; /* slightly larger text */
+                border-radius: 0 0 12px 12px;
+                display: flex;
+                align-items: center;
+                transition: background-color 200ms ease, color 200ms ease, transform 120ms ease;
+            }
+            .dropdown-trigger::before {
+                content: "+";
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-weight: 700;
+                color: #c75a4e;
+                background: #fff;
+                width: 28px; /* larger pill */
+                height: 28px;
+                line-height: 28px;
+                font-size: 1.05rem;
+                text-align: center;
+                border-radius: 6px;
+                transition: background-color 200ms ease, color 200ms ease, transform 120ms ease;
+            }
+            .dropdown-trigger.open::before { content: "−"; }
+            .dropdown-trigger:hover {
+                /* darken the card background slightly on hover as the primary affordance */
+                background-color: #b24b43; /* slightly darker than #c75a4e */
+                filter: none;
+                transform: none;
+                box-shadow: none;
+            }
+            .dropdown-trigger:hover::before {
+                background: #f3f3f3; /* subtle pill background change */
+                color: #b24b43; /* match the darker header on hover */
+            }
+            .dropdown-trigger:focus-visible {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(199,90,78,0.18);
+            }
+
+            /* Dropdown content styles - hidden by default, shown when .open class is added */
+            .dropdown-content {
+                margin-bottom: 0;
+                background-color: #c75a4e; /* pale red */
+                color: #000; /* dark text for contrast */
+                padding: 10px 15px;
+                margin-top: 6px;
+                border-radius: 8px;
+                /* prepare for smooth slide-down */
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 360ms ease, opacity 240ms ease;
+                display: block; /* remain in flow so layout expands */
+            }
+
+            .dropdown-content.open {
+                opacity: 1;
+                /* allow enough room for typical content; JS will set exact max-height when opening */
+                max-height: 600px;
+                margin-bottom: 24px; /* add spacing only when open */
+            }
         </style>
     </head>
 
@@ -251,7 +334,53 @@
         </div>
 
         <div id="contribution">
-            <h2>Design Elements</h2>
+            <h2>Contributions</h2>
+        </div>
+
+        <div id="cont-wrapper">
+            <div class="cont card-red">
+                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Negotiation System</p>
+                <a href="img/placeholder1.jpg" data-lightbox="images" data-title="">
+                    <img src="img/placeholder1.jpg" alt="placeholder">
+                </a>
+                <h3 class="dropdown-trigger" aria-expanded="false">Core mechanic that defines the game</h3>
+                <div class="dropdown-content">
+                    The Negotiation system is the core mechanic that differentiates Unchained from traditional tactical RPGs. Players can choose to either defeat enemies in combat or convince them to lay down their arms, offering multiple approaches to each encounter.
+                </div>
+            </div>
+
+            <div class="cont card-red">
+                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Tactical Combat System</p>
+                <a href="img/placeholder2.jpg" data-lightbox="images" data-title="">
+                    <img src="img/placeholder2.jpg" alt="placeholder">
+                </a>
+                <h3 class="dropdown-trigger" aria-expanded="false">Turn-based tactical gameplay</h3>
+                <div class="dropdown-content">
+                    The tactical combat system features turn-based grid-based movement, unit positioning, and ability usage. Each unit has unique abilities and stat distributions that create strategic depth and encourage multiple playstyles.
+                </div>
+            </div>
+
+            <div class="cont card-red">
+                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Dialogue Integration</p>
+                <a href="img/placeholder3.jpg" data-lightbox="images" data-title="">
+                    <img src="img/placeholder3.jpg" alt="placeholder">
+                </a>
+                <h3 class="dropdown-trigger" aria-expanded="false">Dialogue choices impact gameplay outcomes</h3>
+                <div class="dropdown-content">
+                    Our dialogue system seamlessly integrates with the Negotiation mechanics, allowing player choices and conversations to directly impact combat scenarios and enemy decisions. This creates meaningful moments where words matter as much as actions.
+                </div>
+            </div>
+
+            <div class="cont card-red">
+                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Design Philosophy</p>
+                <a href="img/placeholder4.jpg" data-lightbox="images" data-title="">
+                    <img src="img/placeholder4.jpg" alt="placeholder">
+                </a>
+                <h3 class="dropdown-trigger" aria-expanded="false">Player agency and meaningful choices</h3>
+                <div class="dropdown-content">
+                    We designed Unchained around the philosophy of giving players agency and meaningful choices. Every encounter can be approached in multiple ways, and the story responds to the player's decisions, rewarding both combat mastery and negotiation skill.
+                </div>
+            </div>
         </div>
 
         <div id="footer">
@@ -264,8 +393,49 @@
         <!--Lightbox Plugin-->
         <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
         <script>
-            document.querySelector('.menu-toggle').addEventListener('click', function() {
-                document.getElementById('top-menu').classList.toggle('active');
+            document.addEventListener('DOMContentLoaded', function() {
+                var menuToggle = document.querySelector('.menu-toggle');
+                if (menuToggle) {
+                    menuToggle.addEventListener('click', function() {
+                        document.getElementById('top-menu').classList.toggle('active');
+                    });
+                }
+                // wire up any dropdown triggers on the page
+                var triggers = document.querySelectorAll('.dropdown-trigger');
+                triggers.forEach(function(trigger) {
+                    trigger.addEventListener('click', function() {
+                        var content = trigger.nextElementSibling;
+                        if (!content) return;
+                        var isOpen = content.classList.contains('open');
+                        if (!isOpen) {
+                            // open: add class to enable visible styles, set explicit maxHeight to allow transition
+                            content.classList.add('open');
+                            trigger.classList.add('open');
+                            trigger.setAttribute('aria-expanded', 'true');
+                            // set to scrollHeight so the max-height transition can expand to the exact height
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            // when transition finishes, remove the inline maxHeight so it can grow/shrink naturally
+                            var onOpenEnd = function(e) {
+                                if (e.propertyName === 'max-height') {
+                                    content.style.maxHeight = null;
+                                    content.removeEventListener('transitionend', onOpenEnd);
+                                }
+                            };
+                            content.addEventListener('transitionend', onOpenEnd);
+                        } else {
+                            // close: set maxHeight to current height, force reflow, then collapse
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            // force reflow so the browser acknowledges the starting height
+                            void content.offsetHeight;
+                            // remove the open class so opacity transitions to 0
+                            content.classList.remove('open');
+                            // then collapse height to zero
+                            content.style.maxHeight = '0px';
+                            trigger.classList.remove('open');
+                            trigger.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                });
             });
         </script>
     </body>
