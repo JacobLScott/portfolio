@@ -2,29 +2,29 @@
 
 ## Tasks for page_bugnauts.html
 
-- [ ] Add gameplay gif from old portolio
+- [x] Add gameplay gif from old portolio
   - Locate old portfolio and copy the gif to the new one
   - Determine where on the page it should be showcased
 
-- [ ] Add existing design documents
+- [x] Add existing design documents
   - Locate and gather all design documents related to Bugnauts
   - Determine which documents are relevant to showcase
   - Add sections or links to display design documents on the page
   - Format documents appropriately for web display
 
-- [ ] Add descriptions to enemy bug AI tree
+- [x] Add descriptions to enemy bug AI tree
   - Review the existing behavior tree image (`img/behavior_tree.PNG`)
   - Write detailed descriptions explaining the AI tree structure
   - Explain how different nodes and branches work
   - Add descriptive text to accompany the behavior tree image on the page
 
-- [ ] Describe enemy attack pattern tool
+- [x] Describe enemy attack pattern tool
   - Review the existing pattern design image (`img/pattern_design.PNG`)
   - Write explanations about how the attack pattern tool works
   - Describe the process of creating and tweaking enemy attack patterns
   - Add detailed descriptions to the attack pattern section
 
-- [ ] Showcase early level design greyboxing (with images and text)
+- [x] Showcase early level design greyboxing (with images and text)
   - Gather greyboxing images from early level designs
   - Use old miro board maps/chart
     - Locate and export relevant Miro board screenshots
@@ -35,7 +35,7 @@
   - Add images and descriptive text about the greyboxing process
   - Create a dedicated section for level design greyboxing
 
-- [ ] Show images of unreal engine blueprints for Beetle enemy
+- [x] Show images of unreal engine blueprints for Beetle enemy
   - Locate or capture screenshots of Unreal Engine blueprints for the Beetle enemy
   - Ensure blueprint images are clear and readable
   - Add descriptive captions explaining what the blueprints show
