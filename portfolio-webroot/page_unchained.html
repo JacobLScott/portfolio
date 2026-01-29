@@ -151,7 +151,6 @@
             }
 
             .cont {
-                height: 500px;
                 width: 700px;
                 background-color: #2a2a2a;
                 color: white;
@@ -168,6 +167,12 @@
                 object-fit: cover;
             }
 
+            .cont > a {
+                display: block;
+                height: 350px;
+                overflow: hidden;
+            }
+
             .cont > img {
                 width: 100%;
                 height: 100%;
@@ -179,8 +184,14 @@
                 background-color: #c75a4e;
                 color: #000;
                 border-radius: 10px; /* rounded card corners */
-                overflow: hidden; /* clip inner image/content to rounded corners */
                 box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .cont.card-red > a {
+                border-radius: 10px 10px 0 0;
+                overflow: hidden;
             }
 
             /* Dropdown trigger hover/focus styles (visual affordance) */
@@ -252,8 +263,9 @@
 
             .dropdown-content.open {
                 opacity: 1;
+                overflow: visible;
                 /* allow enough room for typical content; JS will set exact max-height when opening */
-                max-height: 600px;
+                max-height: 1000px;
                 margin-bottom: 24px; /* add spacing only when open */
             }
         </style>
@@ -340,12 +352,18 @@
         <div id="cont-wrapper">
             <div class="cont card-red">
                 <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Negotiation System</p>
-                <a href="img/placeholder1.jpg" data-lightbox="images" data-title="">
-                    <img src="img/placeholder1.jpg" alt="placeholder">
+                <a href="img/unchained/old_negotiation.jpg" data-lightbox="images" data-title="">
+                    <img src="img/unchained/old_negotiation.jpg" alt="Negotiation System">
                 </a>
-                <h3 class="dropdown-trigger" aria-expanded="false">Core mechanic that defines the game</h3>
+                <h3 class="dropdown-trigger" aria-expanded="false">A Core mechanic that changes the genre</h3>
                 <div class="dropdown-content">
-                    The Negotiation system is the core mechanic that differentiates Unchained from traditional tactical RPGs. Players can choose to either defeat enemies in combat or convince them to lay down their arms, offering multiple approaches to each encounter.
+                    The Negotiation system is a core mechanic designed by me with help from the rest of design that differentiates Unchained from traditional tactical RPGs. Players can choose to either defeat enemies in combat or convince them to lay down their arms, offering multiple approaches to each encounter.
+                    <p></p>
+                    In this system, players can spend their action-economy on a turn by Negotiating. In this system, players select pre-made responses as they converse with enemies in an attempt to reduce their Resolve. The Resolve meter is present on all enemies throughout a level and affects their behavior with player characters depending on its value. Enemies may become debuffed, act more passively, flee, or even join the player's side if the right conditions are met.
+                    <br><br>
+                    <img src="img/unchained/negotiation_early.jpg" alt="negotiation prototype 1" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
+                    <p></p>
+                    Throughout development, I worked with designers to iterate on the system. It led to many prototypes and different versions of the UI. Extensive playtesting in early development was essential in refining the system.
                 </div>
             </div>
 
