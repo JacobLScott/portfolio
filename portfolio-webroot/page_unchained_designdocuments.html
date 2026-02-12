@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Jacob Scott | Unchained — Design Documents</title>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="Child page of Jacob Scott's 2026 portfolio site. Contains design documents for the Unchained project authored during my time as a designer.">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Jacob Scott">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">        <Link rel="stylesheet" href="main.css">
+        <script src="components/navbar.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+        <style>
+
+            .pdf-viewer {
+                width: 100%;
+                height: 1000px;
+                background-color: #1b1c1d;
+                border: 1px solid #333;
+                overflow: auto;
+            }
+
+            .pdf-page {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            .pdf-page canvas {
+                border: 1px solid #ccc;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            /* Dropdown trigger + content styles (match page_bugnauts behavior) */
+            .dropdown-trigger {
+                position: relative;
+                cursor: pointer;
+                display: block;
+                width: 75%; /* reduced from 100% to take up 25% less horizontal space */
+                box-sizing: border-box;
+                margin: 0 auto; /* center the element */
+                /* increased vertical padding by ~50% (from 10px -> 15px) */
+                padding: 15px 16px 15px 48px;
+                font-size: 1.05rem;
+                text-align: center;
+                color: #000; /* black text */
+                background-color: #c75a4e; /* pale red background for the clickable title */
+                border-radius: 10px; /* rounded corners */
+                transition: box-shadow 220ms ease, transform 160ms ease, background-color 200ms ease;
+            }
+            .dropdown-trigger::before {
+                content: "+";
+                position: absolute;
+                left: 18px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-weight: 700;
+                background: #fff;
+                color: #c75a4e;
+                width: 26px;
+                height: 26px;
+                line-height: 26px;
+                text-align: center;
+                border-radius: 6px;
+            }
+            .dropdown-trigger.open::before { content: "−"; }
+            .dropdown-trigger:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+            }
+
+            .dropdown-trigger:focus-visible {
+                outline: none;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+                transform: translateY(-2px);
+            }
+
+            .dropdown-content {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 360ms ease, opacity 240ms ease;
+                display: block;
+                margin-bottom: 30px; /* larger padding between dropdowns */
+                background-color: #1b1c1d; /* match page background */
+                padding: 20px; /* add padding around content */
+                box-sizing: border-box;
+            }
+            .dropdown-content.open {
+                opacity: 1;
+                max-height: 2000px; /* large enough to accommodate the iframe; JS will set exact height */
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <nav-bar></nav-bar>
+
+        <div id="bluetop"></div>
+
+        <h1 style="text-align:center; margin-top: 20px; margin-bottom: 12px; font-size: 1.6rem; color: #ffffff;">Unchained — Design Documents</h1>
+
+        <div id="iframe">
+
+            <h2 class="dropdown-trigger" aria-expanded="false" style="text-align:center; margin-top: 6px; margin-bottom: 10px; font-size: 1.2rem;">General Enemy Behavior Spec</h2>
+            <div class="dropdown-content" aria-hidden="true">
+                <div id="pdf-viewer-1" class="pdf-viewer"></div>
+            </div>
+
+            <h2 class="dropdown-trigger" aria-expanded="false" style="text-align:center; margin-top: 6px; margin-bottom: 10px; font-size: 1.2rem;">Soldier Enemy AI</h2>
+            <div class="dropdown-content" aria-hidden="true">
+                <div id="pdf-viewer-2" class="pdf-viewer"></div>
+            </div>
+
+            <h2 class="dropdown-trigger" aria-expanded="false" style="text-align:center; margin-top: 6px; margin-bottom: 10px; font-size: 1.2rem;">Archer Enemy AI</h2>
+            <div class="dropdown-content" aria-hidden="true">
+                <div id="pdf-viewer-3" class="pdf-viewer"></div>
+            </div>
+
+            <h2 class="dropdown-trigger" aria-expanded="false" style="text-align:center; margin-top: 6px; margin-bottom: 10px; font-size: 1.2rem;">Brute Enemy AI</h2>
+            <div class="dropdown-content" aria-hidden="true">
+                <div id="pdf-viewer-4" class="pdf-viewer"></div>
+            </div>
+
+            <h2 class="dropdown-trigger" aria-expanded="false" style="text-align:center; margin-top: 6px; margin-bottom: 10px; font-size: 1.2rem;">Knight Enemy AI</h2>
+            <div class="dropdown-content" aria-hidden="true">
+                <div id="pdf-viewer-5" class="pdf-viewer"></div>
+            </div>
+
+            <h2 class="dropdown-trigger" aria-expanded="false" style="text-align:center; margin-top: 6px; margin-bottom: 10px; font-size: 1.2rem;">Mystic Enemy AI</h2>
+            <div class="dropdown-content" aria-hidden="true">
+                <div id="pdf-viewer-6" class="pdf-viewer"></div>
+            </div>
+
+            <h2 class="dropdown-trigger" aria-expanded="false" style="text-align:center; margin-top: 6px; margin-bottom: 10px; font-size: 1.2rem;">Tutorial Sequence</h2>
+            <div class="dropdown-content" aria-hidden="true">
+                <div id="pdf-viewer-7" class="pdf-viewer"></div>
+            </div>
+
+        </div>
+
+        <div id="footer">
+
+            <p>Copyright © 2026 by Jacob Scott | All images, logos and names are used with permission</p>
+
+        </div>
+
+        <script>
+            // PDF.js worker setup
+            pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+            // PDF configurations with file paths
+            const pdfs = [
+                { id: 'pdf-viewer-1', path: 'Displayed_DesignDocs/Unchained/Enemy%20Behavior.pdf' },
+                { id: 'pdf-viewer-2', path: 'Displayed_DesignDocs/Unchained/Soldier.pdf' },
+                { id: 'pdf-viewer-3', path: 'Displayed_DesignDocs/Unchained/Archer.pdf' },
+                { id: 'pdf-viewer-4', path: 'Displayed_DesignDocs/Unchained/Brute.pdf' },
+                { id: 'pdf-viewer-5', path: 'Displayed_DesignDocs/Unchained/Knight.pdf' },
+                { id: 'pdf-viewer-6', path: 'Displayed_DesignDocs/Unchained/Mystic.pdf' },
+                { id: 'pdf-viewer-7', path: 'Displayed_DesignDocs/Unchained/Tutorial%20Sequence.pdf' }
+            ];
+
+            // Function to render a PDF
+            function renderPDF(viewerId, pdfPath) {
+                const container = document.getElementById(viewerId);
+                if (!container) return;
+
+                pdfjsLib.getDocument(pdfPath).promise.then(pdf => {
+                    // Render all pages
+                    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                        pdf.getPage(pageNum).then(page => {
+                            const scale = 1.5;
+                            const viewport = page.getViewport({ scale });
+
+                            const pageDiv = document.createElement('div');
+                            pageDiv.className = 'pdf-page';
+                            container.appendChild(pageDiv);
+
+                            const canvas = document.createElement('canvas');
+                            const context = canvas.getContext('2d');
+                            canvas.height = viewport.height;
+                            canvas.width = viewport.width;
+
+                            const renderContext = {
+                                canvasContext: context,
+                                viewport: viewport
+                            };
+                            page.render(renderContext);
+                            pageDiv.appendChild(canvas);
+                        });
+                    }
+                }).catch(err => {
+                    console.error('Error loading PDF:', err);
+                    container.innerHTML = '<p>Error loading PDF. Please check the file path.</p>';
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var menuToggle = document.querySelector('.menu-toggle');
+                if (menuToggle) {
+                    menuToggle.addEventListener('click', function() {
+                        document.getElementById('top-menu').classList.toggle('active');
+                    });
+                }
+
+                // wire up dropdown trigger for the pdf viewers
+                var triggers = document.querySelectorAll('.dropdown-trigger');
+                triggers.forEach(function(trigger) {
+                    trigger.addEventListener('click', function() {
+                        var content = trigger.nextElementSibling;
+                        if (!content) return;
+                        var isOpen = content.classList.contains('open');
+                        if (!isOpen) {
+                            content.classList.add('open');
+                            trigger.classList.add('open');
+                            trigger.setAttribute('aria-expanded', 'true');
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            
+                            // Lazy load PDF when dropdown opens
+                            var pdfViewer = content.querySelector('.pdf-viewer');
+                            if (pdfViewer && pdfViewer.children.length === 0) {
+                                var viewerId = pdfViewer.id;
+                                var pdfConfig = pdfs.find(p => p.id === viewerId);
+                                if (pdfConfig) {
+                                    renderPDF(viewerId, pdfConfig.path);
+                                }
+                            }
+
+                            var onOpenEnd = function(e) {
+                                if (e.propertyName === 'max-height') {
+                                    content.style.maxHeight = null;
+                                    content.removeEventListener('transitionend', onOpenEnd);
+                                }
+                            };
+                            content.addEventListener('transitionend', onOpenEnd);
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            void content.offsetHeight; // force reflow
+                            content.classList.remove('open');
+                            content.style.maxHeight = '0px';
+                            trigger.classList.remove('open');
+                            trigger.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+
+
+</html>

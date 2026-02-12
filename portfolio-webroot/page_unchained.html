@@ -267,7 +267,29 @@
                 /* allow enough room for typical content; JS will set exact max-height when opening */
                 max-height: 2000px;
                 margin-bottom: 24px; /* add spacing only when open */
+                padding-bottom: 35px; /* add bottom padding to keep content within container */
             }
+
+            /* Design Documents link icon */
+            .dropdown-content a.doc-link {
+                color: inherit;
+                text-decoration: none;
+                font-weight: 700;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .dropdown-content a.doc-link .affordance-icon {
+                width: 18px;
+                height: 18px;
+                flex: 0 0 18px;
+                stroke: currentColor;
+                fill: none;
+                stroke-width: 1.5;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+            .dropdown-content a.doc-link:hover { text-decoration: underline; }
         </style>
     </head>
 
@@ -304,17 +326,17 @@
                 <p><strong>Contributions</strong></p>
                 <p></p>
                 <ul>
-                    <li>Worked with the design team in developing and implementing the core Negotiation mechanics</li>
+                    <li>Worked with the design team to create and implement the core Negotiation mechanics</li>
                     <p></p>
-                    <li>Created and balanced the tactical combat system, including unit stats, abilities, and movement rules</li>
+                    <li>Created and balanced the tactical combat systems, Negotiation, abilities, movement rules, enemy AI</li>
                     <p></p>
-                    <li>Designed the dialogue system that integrates with the Negotiation mechanics</li>
+                    <li>Greyboxed and implemented Conflicts and levels that players can experience</li>
                     <p></p>
-                    <li>Worked closely with the narrative team to ensure gameplay mechanics supported the story themes</li>
+                    <li>Worked closely with the narrative team to ensure gameplay mechanics and levels supported the story themes</li>
                     <p></p>
-                    <li>Developed and maintained the game design document (GDD)</li>
+                    <li>Developed and maintained numerous game design documents</li>
                     <p></p>
-                    <li>Conducted regular playtesting sessions and implemented feedback-driven improvements</li>
+                    <li>Conducted regular playtesting sessions and shared usability feedback to the team to make improvements to the gameplay and systems</li>
                 </ul>
             </div>
         </div>
@@ -351,11 +373,26 @@
 
         <div id="cont-wrapper">
             <div class="cont card-red">
+                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Early Development</p>
+                <a href="img/unchained/level_brainstorm.jpg" data-lightbox="images" data-title="">
+                    <img src="img/unchained/level_brainstorm.jpg" alt="Level Brainstorming">
+                </a>
+                <h3 class="dropdown-trigger" aria-expanded="false">Designing systems for a turn-based tactics game</h3>
+                <div class="dropdown-content">
+                    Unlike Bugnauts!, Unchained was pitched as a turn-based tactics game. Because of this, a lot of early development time was spent creating and refining systems. I and the other designers worked with paper-prototypes to speed up this process. Once we knew that the systems were fun to interact with, we could then pull the trigger on spending time to create them in the game engine.
+                    <br><br>
+                    <img src="img/unchained/xochi_hithere_ability.png" alt="xochi ability" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
+                    <p></p>
+                    By the time we had a working prototype we had workshopped over 15 different combat systems. Many of them did not make it in to the final game, but many of them were essential to the game's identity and were needed before the prototype was complete. Systems like Negotiation, Character abilities and Chain abilities, turn order, basic enemy behavior, Line of Sight, and Resolve all needed to be in place before we could start testing the core combat loop with playtesters.
+                </div>
+            </div>
+
+            <div class="cont card-red">
                 <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Negotiation System</p>
                 <a href="img/unchained/old_negotiation.jpg" data-lightbox="images" data-title="">
                     <img src="img/unchained/old_negotiation.jpg" alt="Negotiation System">
                 </a>
-                <h3 class="dropdown-trigger" aria-expanded="false">A new mechanic that changes the genre</h3>
+                <h3 class="dropdown-trigger" aria-expanded="false">Convince your foes to lay down their arms or fight with you</h3>
                 <div class="dropdown-content">
                     The Negotiation system is a core mechanic designed by me with help from the rest of design that differentiates Unchained from traditional tactical RPGs. Players can choose to either defeat enemies in combat or convince them to lay down their arms, offering multiple approaches to each encounter.
                     <p></p>
@@ -372,39 +409,66 @@
 
             <div class="cont card-red">
                 <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Enemy AI</p>
-                <a href="img/unchained/enemy_ai.jpg" data-lightbox="images" data-title="">
-                    <img src="img/unchained/enemy_ai.jpg" alt="Enemy AI">
+                <a href="img/unchained/enemy_range.png" data-lightbox="images" data-title="">
+                    <img src="img/unchained/enemy_range.png" alt="Enemy AI">
                 </a>
-                <h3 class="dropdown-trigger" aria-expanded="false">Complimenting the Playable Characters</h3>
+                <h3 class="dropdown-trigger" aria-expanded="false">Player recognition and enemy consistency</h3>
                 <div class="dropdown-content">
-                    The playable characters and their functions were built prior to the enemy AI. Using what I knew about the player characters' roles, I designed the enemies and their AI to showcase the strengths of the player characters.  
-                </div>
-            </div>
+                    In order for players to come up with effective strategies, they need to have an understanding of what their enemies are capable of. I designed the enemies and their AI to be relatively simple and act more predictably so players can quickly learn and adapt to their behavior. I created a variety of enemy types to accomodate the simplicity of their behaviors. This way we can up the complexity of enemy formations to scale difficulty rather than spending more time designing a complex enemy unit. The design docs can be found below along with behavior trees from early in development.                    <p></p>
+                    <em>
+                        <a class="doc-link" href="page_unchained_designdocuments.html" aria-label="Open Unchained design documents">
+                            <svg class="affordance-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <path d="M6 2h7l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" />
+                                <path d="M13 2v6h6" />
+                            </svg>
+                            Featured Design Documents
+                        </a>
+                    </em>
+                    <br><br>
+                    <img src="img/unchained/ai_soldier.jpg" alt="behavior tree 1" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
+                    <p></p>
+                    This soldier unit was the first enemy type that was created and served as a base for the rest to come. This melee unit was designed to attack the nearest player unit while also positioning themselves closer to other player units who may be less bulky.
+                    <br><br>
+                    <img src="img/unchained/ai_archer.jpg" alt="behavior tree 2" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
+                    <p></p>
+                    The archer was designed as a basic ranged enemy. This unit takes a turn off to aim their shot, and then fires if there's a player unit in range.
+                    <br><br>
+                    <img src="img/unchained/ai_knight.jpg" alt="behavior tree 3" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
+                    <p></p>
+                    The knight is a bulky melee unit that can buff its allies. This unit takes a turn to activate its buff, and then acts similar to the soldier. If the player can figure out this pattern, they will learn to use their tank to stop the knight from buffing by taunting them.
 
-            <div class="cont card-red">
-                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Early Development</p>
-                <a href="img/unchained/level_brainstorm.jpg" data-lightbox="images" data-title="">
-                    <img src="img/unchained/level_brainstorm.jpg" alt="Level Brainstorming">
-                </a>
-                <h3 class="dropdown-trigger" aria-expanded="false">Designing systems for a tactics game</h3>
-                <div class="dropdown-content">
-                    Unlike Bugnauts!, Unchained was pitched as a turn-based tactics game. Because of this, a lot of early development time was spent creating and refining systems. I and the other designers worked with paper-prototypes to speed up this process. Once we knew that the systems were fun to interact with, we could then pull the trigger on spending time to create them in the game engine.  
                 </div>
             </div>
 
             <div class="cont card-red">
                 <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Usability</p>
-                <a href="img/unchained/usability.jpg" data-lightbox="images" data-title="">
-                    <img src="img/unchained/usability.jpg" alt="Usability">
+                <a href="img/unchained/usability.png" data-lightbox="images" data-title="">
+                    <img src="img/unchained/usability.png" alt="Usability">
                 </a>
                 <h3 class="dropdown-trigger" aria-expanded="false">Usability and Player Understanding</h3>
                 <div class="dropdown-content">
-                    A challenge that tactics games often face is usability. Not only must Players be given effective tutorials, but the game must also communicate information to the player to allow them to make an informed decision during the tactical battles.
+                    Once we had finished a version of our prototype, because I was already familiar with the game's design I took on the challenge of testing for the game's Usability. Not only must Players be given effective tutorials for our systems, but the systems and UI must also communicate information to the player to allow them to make an informed decision during the Conflicts (levels).
+                    <p></p>
+                    Over the course of development, I conducted over a hundred playtests to test the individual systems, levels, UI, and overall fun factor. I collected and recorded the data from them in a playtest log and then presented the data to the rest of the team to point out bugs, flaws in the systems, and things we could iterate on to make the game better.
+                    <br><br>
+                    <img src="img/unchained/playtest_log.JPG" alt="playtest log" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
+                    <p></p>
+                    As the team got further into development, and we knew what player's struggled with and what content was going to make it in, I used my knowledge from playtests to put together a tutorial for the game.
+                    <p></p>
+                    <em>
+                        <a class="doc-link" href="page_unchained_designdocuments.html" aria-label="Open Unchained design documents">
+                            <svg class="affordance-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <path d="M6 2h7l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" />
+                                <path d="M13 2v6h6" />
+                            </svg>
+                            Featured Design Documents
+                        </a>
+                    </em>
                 </div>
             </div>
 
             <div class="cont card-red">
-                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Design Philosophy</p>
+                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Level and Conflict Design</p>
                 <a href="img/placeholder4.jpg" data-lightbox="images" data-title="">
                     <img src="img/placeholder4.jpg" alt="placeholder">
                 </a>
