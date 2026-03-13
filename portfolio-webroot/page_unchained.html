@@ -250,7 +250,7 @@
                 margin-bottom: 0;
                 background-color: #c75a4e; /* pale red */
                 color: #000; /* dark text for contrast */
-                padding: 10px 15px;
+                padding: 10px 15px 25px 15px;
                 margin-top: 6px;
                 border-radius: 8px;
                 /* prepare for smooth slide-down */
@@ -265,9 +265,9 @@
                 opacity: 1;
                 overflow: visible;
                 /* allow enough room for typical content; JS will set exact max-height when opening */
-                max-height: 2000px;
+                max-height: 3000px;
                 margin-bottom: 24px; /* add spacing only when open */
-                padding-bottom: 35px; /* add bottom padding to keep content within container */
+                padding-bottom: 50px; /* add bottom padding to keep content within container */
             }
 
             /* Design Documents link icon */
@@ -469,12 +469,32 @@
 
             <div class="cont card-red">
                 <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Level and Conflict Design</p>
-                <a href="img/placeholder4.jpg" data-lightbox="images" data-title="">
-                    <img src="img/placeholder4.jpg" alt="placeholder">
+                <a href="img/unchained/1-4_greybox.PNG" data-lightbox="images" data-title="">
+                    <img src="img/unchained/1-4_greybox.PNG" alt="Level Design">
                 </a>
-                <h3 class="dropdown-trigger" aria-expanded="false">Player agency and meaningful choices</h3>
+                <h3 class="dropdown-trigger" aria-expanded="false">The design process for the 1-4 Conflict</h3>
                 <div class="dropdown-content">
-                    We designed Unchained around the philosophy of giving players agency and meaningful choices. Every encounter can be approached in multiple ways, and the story responds to the player's decisions, rewarding both combat mastery and negotiation skill.
+                    After months and months of work with systems and implementation, it was finally time to start using the systems that were created to design fun and interesting levels. It led me to the creation of the 1-4 Conflict.
+                    <p></p>
+                    After some brainstorming about what we wanted to create with our limited scope, I proposed a level that features the local populations struggle against the antagonists' faction. Given their vulnerability when it comes to violence, it made sense to make this Conflict feature a defense map in which the player must protect the local Neshi population. 
+                    <br><br>
+                    <img src="img/unchained/1-4_layout.PNG" alt="1-4 2D Map" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
+                    <p></p>
+                    Defense maps in tactical RPGs can often be stagnant and uninspired without a balance between player action-economy and evolving objectives during the map. I made sure to address this as I developed the 2D layout of the level. 
+                    <p></p>
+                    Players must use their characters to block the enemies approaching from the North, from reaching the Bones in the center of the ruins. As players get accustomed to the level and fend off the first few waves, a twist is thrown at them at the bottom of the map where a group of enemies appears and blows open the wall creating another opening for the enemies to pile in. This forces the player to adapt as they now have a third opening to block when they only have two characters capable of doing this for an extended period of time.
+                    <p></p>
+                    After showing the layout of the level and the intended behavior of the level to the team, I was approved to begin greyboxing.
+                    <br><br>
+                    <img src="img/unchained/1-4_development.PNG" alt="1-4 blockout with level layout" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
+                    <p></p>
+                    When it comes to greyboxing, I like to start with doing a rough blockout of the playable area and boundaries, all while having access to a reference of the original 2D layout.
+                    <p></p>
+                    After the blockout is done, I go over the greybox again by working on the Blockmesh which is a similar process that gives more detail to the greybox.
+                    <br><br>
+                    <img src="img/unchained/1-4_blockout.PNG" alt="1-4 2D Map" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
+                    <p></p>
+                    This greybox was just finished recently and is waiting on the implementation of previous levels before it.
                 </div>
             </div>
         </div>
