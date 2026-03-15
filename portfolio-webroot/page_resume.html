@@ -1,56 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <title>Jacob Scott | Resume</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Resume of Jacob Scott — Game Designer and Games User Researcher.">
+    <meta name="author" content="Jacob Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="components/navbar.js" defer></script>
+</head>
 
-        <title>Jacob Scott | Resume</title>
+<body>
+    <nav-bar></nav-bar>
+    <div id="bluetop"></div>
 
-        <meta charset="UTF-8">
-        <meta name="description" content="Child page of Jacob Scott's 2026 portfolio site. Contains a resume that shows off skills and experience.">
-        <meta name="keywords" content="HTML, CSS">
-        <meta name="author" content="Jacob Scott">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="resume-page-wrapper">
 
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">        <Link rel="stylesheet" href="main.css">
-        <script src="components/navbar.js" defer></script>
-
-        <style>
-
-            iframe {
-			width: 99%;
-			height: 1000px;
-            margin-left: 5px;
-		}
-
-        </style>
-
-    </head>
-    <body>
-        <nav-bar></nav-bar>
-
-        <div id="bluetop"></div>
-
-        <div id="iframe">
-
-            <iframe src="resume.html" name="resume-frame"></iframe>
-
+        <!-- Download bar -->
+        <div class="resume-download-bar">
+            <p>Prefer a PDF? Download Jacob's full resume below.</p>
+            <a href="Jacob_Scott_Resume.pdf" download class="cta-btn cta-btn-primary">Download Resume (PDF)</a>
         </div>
 
-        <div id="footer">
+        <!-- Resume document -->
+        <div class="resume-doc">
 
-            <p>Copyright © 2026 by Jacob Scott | All images, logos and names are used with permission</p>
+            <h1>Jacob Scott</h1>
+            <p class="resume-contact-line">
+                Bridgewater, NJ &nbsp;&bull;&nbsp;
+                <a href="mailto:jacobscott03@gmail.com">jacobscott03@gmail.com</a>
+                &nbsp;&bull;&nbsp;
+                <a href="https://www.linkedin.com/in/jacob-scott-3a26aa23b" target="_blank">LinkedIn</a>
+            </p>
+            <hr>
+
+            <h2>Objective</h2>
+            <p>
+                I am an aspiring game designer and games user researcher seeking to create meaningful challenges
+                through strategy and tactics games. I focus on enemy behavior, level design, and designing
+                player experiences that reward critical thinking and tactical decision-making.
+            </p>
+
+            <h2>Education</h2>
+            <h3>University of Southern California &mdash; Los Angeles, CA</h3>
+            <h4>B.A. Interactive Media and Game Design &nbsp;&bull;&nbsp; <em>Cum Laude</em></h4>
+            <p class="date">May 2025</p>
+            <p>USC School of Cinematic Arts &mdash; Interactive Media &amp; Games Division</p>
+
+            <h2>Experience</h2>
+
+            <h3>Game Designer</h3>
+            <h4>University of Southern California</h4>
+            <p class="date">2021 – Present</p>
+            <ol>
+                <li>
+                    <strong>Unchained: Tale of Enra</strong> &mdash; 2024–Present
+                    <ul>
+                        <li>Designed and balanced the Negotiation system, combat systems, enemy AI, and abilities.</li>
+                        <li>Greyboxed and implemented levels (Conflicts) including the 1-4 defense map.</li>
+                        <li>Worked closely with the narrative team to align mechanics with story themes.</li>
+                        <li>Served as Lead User Researcher; conducted 100+ playtests and presented findings each sprint.</li>
+                        <li>Designed and implemented the tutorial sequence.</li>
+                        <li>Worked as one of 4 designers on a team of 50+ developers.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong><a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank">Bugnauts!</a></strong> &mdash; 2023–2024
+                    <ul>
+                        <li>Prototyped enemy attack patterns and AI behavior trees in Unreal Engine 5 Blueprints.</li>
+                        <li>Greyboxed early level layouts using 2D top-down diagrams.</li>
+                        <li>Wrote and maintained design documents for enemies, mechanics, and combat features.</li>
+                        <li>Worked as one of 3 designers on a team of 40+ developers.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Rock, Paper, Scissors, Shoot!</strong> &mdash; 2023
+                    <ul>
+                        <li>Prototyped gameplay and designed enemies and levels.</li>
+                        <li>Worked as one of four team members (one of two designers/engineers).</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Chimken Crusade</strong> &mdash; 2022
+                    <ul>
+                        <li>Prototyped concept and all gameplay; designed all enemies and levels.</li>
+                        <li>Worked as one of two team members.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Games User Researcher</h3>
+            <h4>University of Southern California</h4>
+            <p class="date">2023 – Present</p>
+            <ol>
+                <li>
+                    <strong>Unchained: Tale of Enra</strong> &mdash; 2024–Present
+                    <ul>
+                        <li>Lead and sole user researcher on the project.</li>
+                        <li>Conducted 100+ playtests covering systems, levels, UI, and overall fun factor.</li>
+                        <li>Maintained a playtest log and presented data-driven findings to the team each sprint.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong><a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank">Bugnauts!</a></strong> &mdash; 2023–2024
+                    <ul>
+                        <li>Assisted in playtesting and reporting as one of 2 user researchers.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Engineer &amp; Programmer</h3>
+            <h4>University of Southern California</h4>
+            <p class="date">2022 – 2024</p>
+            <ol>
+                <li>
+                    <strong>Chimken Crusade</strong> &mdash; 2022
+                    <ul>
+                        <li>Sole gameplay engineer; implemented all mechanics and enemies in Unity.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Rock, Paper, Scissors, Shoot!</strong> &mdash; 2023
+                    <ul>
+                        <li>Implemented mechanics and enemies; one of two engineers.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong><a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank">Bugnauts!</a></strong> &mdash; 2023–2024
+                    <ul>
+                        <li>Implemented enemy AI using Unreal Engine 5 Blueprints and Behavior Trees.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h2>Skills</h2>
+
+            <h3>Game Design</h3>
+            <ul>
+                <li>Game Prototyping &amp; Systems Design</li>
+                <li>Level &amp; Map Design</li>
+                <li>Enemy Design &amp; AI Design</li>
+                <li>Design Documentation</li>
+                <li>Playtesting Conduction &amp; Reporting</li>
+                <li>Player Experience Analysis</li>
+            </ul>
+
+            <h3>Game Engines</h3>
+            <ul>
+                <li>Unity</li>
+                <li>Unreal Engine 5 (Blueprints)</li>
+            </ul>
+
+            <h3>Programming</h3>
+            <ul>
+                <li>C#</li>
+                <li>Python</li>
+                <li>HTML / CSS</li>
+            </ul>
 
         </div>
+    </div>
 
-        <script>
-            document.querySelector('.menu-toggle').addEventListener('click', function() {
-                document.getElementById('top-menu').classList.toggle('active');
-            });
-        </script>
-    </body>
-
-
+    <div id="footer">
+        <p>Copyright &copy; 2026 Jacob Scott &mdash; All images, logos, and names used with permission</p>
+    </div>
+</body>
 </html>

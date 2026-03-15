@@ -1,519 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <title>Jacob Scott | Bugnauts!</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Case study: Bugnauts! — Jacob Scott's contributions as Game Designer and User Researcher on this USC Games action title built in Unreal Engine 5.">
+    <meta name="author" content="Jacob Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lightbox2/dist/css/lightbox.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="components/navbar.js" defer></script>
+</head>
 
-        <title>Jacob Scott | Bugnauts!</title>
+<body>
+    <nav-bar></nav-bar>
+    <div id="bluetop"></div>
 
-        <meta charset="UTF-8">
-        <meta name="description" content="Child page of Jacob Scott's 2026 portfolio site. Contains detailed information about his contributions to 'Bugnauts!' which is a video game created by a team of students at the USC Games program.">
-        <meta name="keywords" content="HTML, CSS">
-        <meta name="author" content="Jacob Scott">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="lightbox2/dist/css/lightbox.min.css">        <Link rel="stylesheet" href="main.css">
-        <script src="components/navbar.js" defer></script>
-
-        <style>
-
-            #bugnaut-background {
-                margin-left: 0px;
-                margin-right: 0px;
-                margin-bottom: 0px;
-                margin-top: 0px;
-                height: 300%;
-                width: 100%;
-                background-image: url('img/bugnaut_background.avif');
-                background-size: cover;
-                background-position: center;
-                padding-top: 5px;
-			    padding-bottom: 30px;
-                text-align: center;
-                font-size: 4.0em;
-                text-shadow: 0px 0px 15px #FFF;
-                color: black;
-            }
-
-            #wrapper1 {
-                display: flex;
-                flex-direction: flex-start;
-                justify-content: center;
-            }
-            
-            #bugnaut-main {
-                background-color: white;
-                opacity: 0.9;
-                text-align: left;
-                padding: 50px;
-                height: 100%;
-                width: 66%;
-                margin-bottom: 0px;
-            }
-
-            #steam-wrapper {
-                display: flex;
-                flex-direction: flex-start;
-                justify-content: center;
-                position: relative;
-            }
-            #steam {
-                margin-left: 0px;
-                margin-right: 0px;
-                margin-top: 0px;
-                margin-bottom: 0px;
-                padding-bottom: 6px;
-                padding-top: 1px;
-                color: white;
-                text-align: center;
-                background-color: #0c2c5e;
-                width: 100%;
-            }
-
-            #steam img {
-                width: 10%;
-            }
-
-            .overlay {
-                position: absolute;
-			    top: 0px;
-			    bottom: 0px;
-			    left: 0px;
-			    right: 0px;
-                width: 100%;
-
-			    /* background-color: black; */
-			    color: white;
-			    /* opacity: 0.7; */
-			    background-color: rgba(0, 0, 0, 0.7);
-
-			    text-align: center;
-			    padding-top: 100px;
-
-                
-                visibility: hidden;
-            }
-            
-            #steam:hover .overlay {
-                visibility: visible;
-            }
-
-            #image-wrapper {
-                display: flex;
-                align-items: flex-start;
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: 70px;
-            }
-
-            .image > img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            .image:first-child > img {
-                width: auto;
-                height: auto;
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: scale-down;
-            }
-
-            .image {
-                height: 345px;
-                width: 460px;
-                background-color: rgb(17, 115, 79);
-                color: white;
-                text-align: center;
-                margin-right: 30px;
-                margin-left: 30px;
-                margin-bottom: 70px;
-            }
-
-            .image:first-child {
-                background-color: #1b1c1d;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            #contribution {
-                text-align: center;
-                color: white;
-                height: 100px;
-                background-color: black;
-                padding-top: 5px;
-                font-size: 1.2em;
-            }
-
-            #cont-wrapper {
-                display: flex;
-                align-items: flex-start;
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: 70px;
-            }
-
-            .cont {
-                /* height: 500px; */
-                width: 700px;
-                background-color: rgb(17, 115, 79);
-                color: white;
-                text-align: center;
-                margin-right: 100px;
-                margin-left: 100px;
-                margin-bottom: 70px;
-                object-fit: cover;
-            }
-            /* specific red card to match dropdown */
-            .cont.card-red {
-                background-color: #c75a4e;
-                color: #000;
-                border-radius: 10px; /* rounded card corners */
-                overflow: hidden; /* clip inner image/content to rounded corners */
-                box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-            }
-
-            /* Dropdown trigger hover/focus styles (visual affordance) */
-            .dropdown-trigger {
-                position: relative;
-                cursor: pointer;
-                display: block;
-                width: 100%;
-                box-sizing: border-box;
-                background-color: #c75a4e;
-                color: #000;
-                padding: 12px 16px 12px 64px; /* larger padding for bigger hit area */
-                height: 52px; /* taller button */
-                font-size: 1.05rem; /* slightly larger text */
-                border-radius: 0 0 12px 12px;
-                display: flex;
-                align-items: center;
-                transition: background-color 200ms ease, color 200ms ease, transform 120ms ease;
-            }
-            .dropdown-trigger::before {
-                content: "+";
-                position: absolute;
-                left: 16px;
-                top: 50%;
-                transform: translateY(-50%);
-                font-weight: 700;
-                color: #c75a4e;
-                background: #fff;
-                width: 28px; /* larger pill */
-                height: 28px;
-                line-height: 28px;
-                font-size: 1.05rem;
-                text-align: center;
-                border-radius: 6px;
-                transition: background-color 200ms ease, color 200ms ease, transform 120ms ease;
-            }
-            .dropdown-trigger.open::before { content: "−"; }
-            .dropdown-trigger:hover {
-                /* darken the card background slightly on hover as the primary affordance */
-                background-color: #b24b43; /* slightly darker than #c75a4e */
-                filter: none;
-                transform: none;
-                box-shadow: none;
-            }
-            .dropdown-trigger:hover::before {
-                background: #f3f3f3; /* subtle pill background change */
-                color: #b24b43; /* match the darker header on hover */
-            }
-            .dropdown-trigger:focus-visible {
-                outline: none;
-                box-shadow: 0 0 0 3px rgba(199,90,78,0.18);
-            }
-
-            /* Dropdown content styles - hidden by default, shown when .open class is added */
-            .dropdown-content {
-                margin-bottom: 0;
-                background-color: #c75a4e; /* pale red */
-                color: #000; /* dark text for contrast */
-                padding: 10px 15px;
-                margin-top: 6px;
-                border-radius: 8px;
-                /* prepare for smooth slide-down */
-                max-height: 0;
-                overflow: hidden;
-                opacity: 0;
-                transition: max-height 360ms ease, opacity 240ms ease;
-                display: block; /* remain in flow so layout expands */
-            }
-
-            .dropdown-content.open {
-                opacity: 1;
-                /* allow enough room for typical content; JS will set exact max-height when opening */
-                max-height: 600px;
-                margin-bottom: 24px; /* add spacing only when open */
-            }
-
-            a > img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            .cont > img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            /* Design Documents link icon */
-            .dropdown-content a.doc-link {
-                color: inherit;
-                text-decoration: none;
-                font-weight: 700;
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-            }
-            .dropdown-content a.doc-link .affordance-icon {
-                width: 18px;
-                height: 18px;
-                flex: 0 0 18px;
-                stroke: currentColor;
-                fill: none;
-                stroke-width: 1.5;
-                stroke-linecap: round;
-                stroke-linejoin: round;
-            }
-            .dropdown-content a.doc-link:hover { text-decoration: underline; }
-
-        </style>
-
-    </head>
-    <body>
-        <nav-bar></nav-bar>
-
-        <div id="bluetop"></div>
-
-        <div id="bugnaut-background">
-
+    <!-- Banner -->
+    <div class="page-banner" style="background-image: url('img/bugnaut_background.avif'); min-height: 300px;">
+        <div class="page-banner-content">
             <h1>Bugnauts!</h1>
+            <p class="page-banner-subtitle">Game Designer &bull; User Researcher &bull; USC Games &bull; Unreal Engine 5</p>
+        </div>
+    </div>
 
+    <!-- Steam link -->
+    <div class="steam-banner">
+        <h2>Play for yourself on Steam</h2>
+        <img src="img/steam_logo.png" alt="Steam logo" style="display:inline-block; width:50px; vertical-align:middle; margin-left:0.5rem;">
+        <br>
+        <a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank" class="steam-link">View on Steam &rarr;</a>
+    </div>
+
+    <!-- Project Overview -->
+    <div class="case-study-wrapper">
+        <div class="case-study-main">
+            <h2>Project Overview</h2>
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Game Designer &amp;<br>User Researcher</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Team Size</span>
+                    <span class="meta-value">40+ developers<br>(3 designers)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeframe</span>
+                    <span class="meta-value">April 2023 – May 2024</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Engine / Tools</span>
+                    <span class="meta-value">Unreal Engine 5<br>Blueprints</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value"><a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank">Live on Steam ↗</a></span>
+                </div>
+            </div>
+
+            <p>
+                Bugnauts! is a single-player third-person action game about ecosystem restoration.
+                Players control Chloe, a young entomologist who must use her bug net to defeat giant Phantom Bugs
+                that have overtaken her island home. The game mixes accessible 3D projectile gameplay with
+                environmental education and was shipped as a USC Games Capstone project.
+            </p>
+
+            <h2>Design Goals</h2>
+            <p>
+                The combat needed to be approachable to a broad audience while remaining engaging through encounter variety.
+                Enemy bugs had to feel distinct — each introducing a new movement or attack challenge — without requiring
+                complex AI. The design priority was <strong>readable enemy behavior</strong> that rewarded player attention
+                and spatial awareness rather than reaction time alone.
+            </p>
+
+            <h2>My Contributions</h2>
+            <ul>
+                <li>Worked as one of 3 designers on a 40+ person team building a commercial-quality game for USC's AGP program</li>
+                <li>Greyboxed early level layouts using 2D top-down diagrams before taking them into engine</li>
+                <li>Prototyped and implemented mechanics and enemy features using UE5 Blueprints</li>
+                <li>Created AI behavior trees for enemy bug types in Unreal Engine</li>
+                <li>Designed and tuned the majority of enemy bullet attack patterns in-game</li>
+                <li>Created design documents for enemies, mechanics, and combat features</li>
+                <li>Assisted in playtesting conduction and reporting as one of 2 User Researchers</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Screenshot Gallery -->
+    <div class="image-gallery">
+        <div class="gallery-img">
+            <a href="img/title.PNG" data-lightbox="bugnauts" data-title="Bugnauts! title screen">
+                <img src="img/title.PNG" alt="Bugnauts title screen">
+            </a>
+        </div>
+        <div class="gallery-img">
+            <a href="img/beetle.jpg" data-lightbox="bugnauts" data-title="Combat with a Grunt Beetle">
+                <img src="img/beetle.jpg" alt="Combat with a Grunt Beetle">
+            </a>
+        </div>
+        <div class="gallery-img">
+            <a href="img/bridge.png" data-lightbox="bugnauts" data-title="Bridge environment">
+                <img src="img/bridge.png" alt="Bridge level environment">
+            </a>
+        </div>
+        <div class="gallery-img">
+            <a href="img/dex.jpg" data-lightbox="bugnauts" data-title="Bug journal (Dex)">
+                <img src="img/dex.jpg" alt="In-game bug journal">
+            </a>
+        </div>
+    </div>
+
+    <!-- Detailed Contribution Cards -->
+    <div class="cont-section-label">
+        <h2>Design Deep Dives</h2>
+    </div>
+
+    <div class="cont-wrapper">
+
+        <div class="cont card-accent">
+            <p class="cont-card-title">Early Level Design</p>
+            <a href="img/bugnaut_earlyleveldesign.JPG" data-lightbox="bugnauts" data-title="Early 2D level layout">
+                <img src="img/bugnaut_earlyleveldesign.JPG" alt="Early 2D level layout diagram">
+            </a>
+            <h3 class="dropdown-trigger" aria-expanded="false">Using 2D diagrams for a 3D game</h3>
+            <div class="dropdown-content">
+                Despite working in a 3D engine, I and my fellow designers used 2D top-down diagrams for early level
+                planning. This let us quickly explore spatial flow, mechanic placement, and pacing without the cost
+                of building geometry — and gave us a clear reference when starting the greybox in engine.
+                <br><br>
+                <img src="img/bugnaut_tutorialblockout.JPG" alt="Tutorial level blockout">
+            </div>
         </div>
 
-        <div id="steam-wrapper">
-
-            <div id="steam">
-
-                <h2>Play for yourself on Steam!</h2>
-
-                <img src="img/steam_logo.png" alt="Steam logo">                <a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank" class="overlay">
-                    <h3>View on Steam</h3>
-                </a>
-    
+        <div class="cont card-accent">
+            <p class="cont-card-title">Enemy Behavior Trees</p>
+            <a href="img/behavior_tree.PNG" data-lightbox="bugnauts" data-title="Enemy behavior tree">
+                <img src="img/behavior_tree.PNG" alt="Enemy AI behavior tree in UE5">
+            </a>
+            <h3 class="dropdown-trigger" aria-expanded="false">Rapid AI iteration through Behavior Trees</h3>
+            <div class="dropdown-content">
+                UE5's Behavior Trees let me and my fellow designers quickly iterate on enemy combat patterns.
+                Once an enemy type's behavior felt right, we could make variations by reordering nodes on a copy
+                of the tree — making enemy behavior feel more complex than the underlying logic actually was.
+                This was particularly valuable for deciding when specific attack patterns should trigger.
+                <br><br>
+                <img src="img/bugnaut_beetlebehavior.JPG" alt="Grunt Beetle behavior tree detail">
             </div>
-
-        </div> <!--steam-wrapper-->
-
-        <div id="wrapper1">
-
-            <div id="bugnaut-main">
-
-                <h2>Bugnauts!</h2>
-    
-                <p></p>
-                <p>April 2023 - May 2024</p>
-                <p></p>
-                <p>Role: Designer</p>
-                <p>Bugnauts! is a single-player third-person action game that mixes accessible 3D projectile gameplay with environmental education. Players play as Chloe, a young aspiring entomologist who must use her bug net to defeat the giant Phantom Bugs that have overtaken the island she calls home. Bugnauts! is a finished project developed in Unreal Engine 5 as a capstone project at USC.</p>
-                <p></p>
-                <p><strong>Contributions</strong></p>
-                <p></p>
-                <ul>
-                    <li>Worked cooperatively on a team of 40+ with 2 other designers to create a game for AGP, USC's capstone project class.</li>
-                    <p></p>
-                    <li>Greyboxed early forms of levels within the game</li>
-                    <p></p>
-                    <li>Prototyped and implemented mechanics and enemy features using Unreal Engine's Blueprint system</li>
-                    <p></p>
-                    <li>Created AI for enemy bugs using Unreal Engine's behavior tree systems</li>
-                    <p></p>
-                    <li>Created and tweaked the majority of enemy bugs' bullet attack patterns within the game</li>
-                    <p></p>
-                    <li>Created design documents for enemies, mechanics, and combat features</li>
-                </ul>
-    
-            </div>
-
-        </div> <!--wrapper1-->
-
-        
-
-
-        <div id="image-wrapper">
-
-            <div class="image">
-
-                <a href="img/title.png" data-lightbox="images" data-title="">
-                    <img src="img/title.png" alt="title">
-                  </a>
-
-            </div>
-
-            <div class="image">
-
-                <a href="img/beetle.jpg" data-lightbox="images" data-title="">
-                    <img src="img/beetle.jpg" alt="fight with beetle">
-                  </a>
-
-            </div>
-
-            <div class="image">
-
-                <a href="img/bridge.png" data-lightbox="images" data-title="">
-                    <img src="img/bridge.png" alt="bugnaut bridge">
-                  </a>
-
-            </div>
-
-            <div class="image">
-
-                <a href="img/dex.jpg" data-lightbox="images" data-title="">
-                    <img src="img/dex.jpg" alt="journal beetle">
-                  </a>
-
-            </div>
-
         </div>
 
-        <div id="contribution">
-
-            <h2>Contributions</h2>
-
-        </div> <!--contribution-->
-
-        <div id="cont-wrapper">
-
-                        <div class="cont card-red">
-                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Early Level Design</p>
-                <a href="img/bugnaut_earlyleveldesign.JPG" data-lightbox="images" data-title="">
-                    <img src="img/bugnaut_earlyleveldesign.JPG" alt="placeholder">
-                  </a>
-                    <h3 class="dropdown-trigger" aria-expanded="false">Using 2D diagrams for a 3D game</h3>
-                    <div class="dropdown-content">
-                        Despite working in a 3D engine to create a 3D game, I and my fellow designers used 2D top-down diagrams to form early versions of our levels. This helped us get a general sense of the space our players would be in and where certain mechanics would be taught. It also allowed us to make better use of the space as we started to greybox and blockout the level in engine.
-                        <br><br>
-                        <img src="img/bugnaut_tutorialblockout.JPG" alt="level design placeholder" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
-                    </div>
+        <div class="cont card-accent">
+            <p class="cont-card-title">Attack Pattern Design</p>
+            <a href="img/pattern_design.PNG" data-lightbox="bugnauts" data-title="Bullet pattern design tool">
+                <img src="img/pattern_design.PNG" alt="Bullet attack pattern design tool">
+            </a>
+            <h3 class="dropdown-trigger" aria-expanded="false">Creating enemy attack patterns from scratch</h3>
+            <div class="dropdown-content">
+                An engineer on the project built a custom tool that let designers create and tune bullet attack
+                patterns by adjusting parameters — bullet speed, spread, direction, timing, and shot count per burst.
+                I used this tool to rapidly prototype attacks that challenged player movement and spatial awareness.
+                <p>
+                    Each pattern was then attached to a node on the behavior tree. The image above shows a bullet
+                    type, shot count, and burst timing for what became the Grunt Beetle's primary attack.
+                </p>
+                <img src="img/bugnaut_beetlebehavior.JPG" alt="Attack pattern connected to behavior tree">
             </div>
-                        <div class="cont card-red">
-                                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Behavior Trees</p>
-                                <a href="img/behavior_tree.PNG" data-lightbox="images" data-title="">
-                                        <img src="img/behavior_tree.PNG" alt="Behavior Tree">
-                                    </a>
-                            <h3 class="dropdown-trigger" aria-expanded="false">Allowed for quick iterations and changes to Enemy AI</h3>
-                                <div class="dropdown-content">
-                                    With the help of Behavior Trees I and my fellow designers were able to quickly change and iterate on enemy behavior to create more varied combat challenges for the player. Once we were happy with a particular enemy type's behavior we could make variations of it by switching around the order and positions of nodes on a copy of the tree to make enemy behavior seem more complex than it actually was. It was incredibly useful for helping us decide when a specific attack pattern should be fired at.
-                                    <br><br>
-                                    <img src="img/bugnaut_beetlebehavior.JPG" alt="Behavior Tree (detail)" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
-                                </div>
-                        </div>
-                        <div class="cont card-red">
-                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Attack Patterns</p>
-                <a href="img/pattern_design.PNG" data-lightbox="images" data-title="">
-                    <img src="img/pattern_design.PNG" alt="bullet pattern">
-                  </a>
-                    <h3 class="dropdown-trigger" aria-expanded="false">The creation of enemy attack patterns</h3>
-                    <div class="dropdown-content">
-                        This tool, created by one of the engineers on the project allowed designers to create and tweak enemy bullet attack patterns. By adjusting parameters such as bullet speed, direction, spread, and timing, I was able to quickly iterate on attacks that would test the player's movement capabilities. The image above would show me what bullet type was selected, the number of shots in each 'attack' as well as the time between each 'attack'. This pattern was then attached to a node on the behavior tree and ended up being an attack of the Grunt Beetle enemy. 
-                        <br><br>
-                        <img src="img/bugnaut_beetlebehavior.JPG" alt="Attack Pattern (detail)" style="width: 100%; height: auto; border-radius: 6px; margin-top: 10px;">
-                    </div>
-            </div>
-            <div class="cont card-red">
-                <p style="margin: 0 0 10px 0; font-weight: bold; text-align: center; padding: 0 16px; margin-top: 12px; font-size: 1.2rem;">Design Documents</p>
-                <a href="img/bugnaut_designdocuments.JPG" data-lightbox="images" data-title="">
-                    <img src="img/bugnaut_designdocuments.JPG" alt="placeholder">
-                  </a>
-                    <h3 class="dropdown-trigger" aria-expanded="false">The importance of Documentation</h3>
-                    <div class="dropdown-content">
-                        <em>
-                            <a class="doc-link" href="page_bugnauts_designdocuments.html" aria-label="Open Bugnauts design documents">
-                                <svg class="affordance-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                    <path d="M6 2h7l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" />
-                                    <path d="M13 2v6h6" />
-                                </svg>
-                                Featured Design Documents
-                            </a>
-                        </em>
-                        <p></p>
-                        While not the most exciting thing in the world, writing and documenting our ideas was often how a feature got approved for implementation. It was very fun to discuss these with other designers on the team and it helped refine our ideas that were presented on these documents. Additionally, the engineers would not have much to go off of for implementation of a feature without these docs.
-                    </div>
-            </div>
-
-        </div>
-        
-        
-
-        <div id="footer">
-
-            <p>Copyright © 2026 by Jacob Scott | All images, logos and names are used with permission</p>
-
         </div>
 
+        <div class="cont card-accent">
+            <p class="cont-card-title">Design Documentation</p>
+            <a href="img/bugnaut_designdocuments.JPG" data-lightbox="bugnauts" data-title="Bugnauts design documents">
+                <img src="img/bugnaut_designdocuments.JPG" alt="Bugnauts design documents">
+            </a>
+            <h3 class="dropdown-trigger" aria-expanded="false">The importance of documentation on a large team</h3>
+            <div class="dropdown-content">
+                <em>
+                    <a class="doc-link" href="page_bugnauts_designdocuments.html" aria-label="View Bugnauts design documents">
+                        <svg class="affordance-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <path d="M6 2h7l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/>
+                            <path d="M13 2v6h6"/>
+                        </svg>
+                        View Featured Design Documents
+                    </a>
+                </em>
+                <p>
+                    On a 40+ person team, documentation was the primary vehicle for getting a feature approved and
+                    implemented. Writing a clear design doc forced us to stress-test our ideas before pitching them —
+                    and gave engineers a concrete spec to work from. Designing the documents themselves became a design
+                    exercise.
+                </p>
+            </div>
+        </div>
 
+    </div>
 
+    <div id="footer">
+        <p>Copyright &copy; 2026 Jacob Scott &mdash; All images, logos, and names used with permission</p>
+    </div>
 
-        <!--jQuery Library-->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
-  
-        <!--Lightbox Plugin-->
-        <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var menuToggle = document.querySelector('.menu-toggle');
-                if (menuToggle) {
-                    menuToggle.addEventListener('click', function() {
-                        document.getElementById('top-menu').classList.toggle('active');
-                    });
-                }
-                // wire up any dropdown triggers on the page
-                var triggers = document.querySelectorAll('.dropdown-trigger');
-                triggers.forEach(function(trigger) {
-                    trigger.addEventListener('click', function() {
-                        var content = trigger.nextElementSibling;
-                        if (!content) return;
-                        var isOpen = content.classList.contains('open');
-                        if (!isOpen) {
-                            // open: add class to enable visible styles, set explicit maxHeight to allow transition
-                            content.classList.add('open');
-                            trigger.classList.add('open');
-                            trigger.setAttribute('aria-expanded', 'true');
-                            // set to scrollHeight so the max-height transition can expand to the exact height
-                            content.style.maxHeight = content.scrollHeight + 'px';
-                            // when transition finishes, remove the inline maxHeight so it can grow/shrink naturally
-                            var onOpenEnd = function(e) {
-                                if (e.propertyName === 'max-height') {
-                                    content.style.maxHeight = null;
-                                    content.removeEventListener('transitionend', onOpenEnd);
-                                }
-                            };
-                            content.addEventListener('transitionend', onOpenEnd);
-                        } else {
-                            // close: set maxHeight to current height, force reflow, then collapse
-                            content.style.maxHeight = content.scrollHeight + 'px';
-                            // force reflow so the browser acknowledges the starting height
-                            void content.offsetHeight;
-                            // remove the open class so opacity transitions to 0
-                            content.classList.remove('open');
-                            // then collapse height to zero
-                            content.style.maxHeight = '0px';
-                            trigger.classList.remove('open');
-                            trigger.setAttribute('aria-expanded', 'false');
-                        }
-                    });
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.dropdown-trigger').forEach(function (trigger) {
+                trigger.addEventListener('click', function () {
+                    var content = trigger.nextElementSibling;
+                    if (!content) return;
+                    var isOpen = content.classList.contains('open');
+                    if (!isOpen) {
+                        content.classList.add('open');
+                        trigger.classList.add('open');
+                        trigger.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.addEventListener('transitionend', function handler(e) {
+                            if (e.propertyName === 'max-height') {
+                                content.style.maxHeight = null;
+                                content.removeEventListener('transitionend', handler);
+                            }
+                        });
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        void content.offsetHeight;
+                        content.classList.remove('open');
+                        content.style.maxHeight = '0px';
+                        trigger.classList.remove('open');
+                        trigger.setAttribute('aria-expanded', 'false');
+                    }
                 });
             });
-        </script>
-    </body>
-
-
+        });
+    </script>
+</body>
 </html>
