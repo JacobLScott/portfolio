@@ -1,187 +1,135 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Jacob Scott | UE5 Level Design</title>
-        <meta charset="UTF-8">
-        <meta name="description" content="Child page of Jacob Scott's portfolio site. Contains detailed information about custom level design work in Unreal Engine 5.">
-        <meta name="keywords" content="HTML, CSS, Game Development, Level Design, Unreal Engine 5">
-        <meta name="author" content="Jacob Scott">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <title>Jacob Scott | UE5 Level Design</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Case study: Unreal Engine 5 Level Design — Jacob Scott's personal level design work demonstrating a sketch-to-blockmesh pipeline.">
+    <meta name="author" content="Jacob Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="components/navbar.js" defer></script>
+</head>
 
-        <Link rel="stylesheet" href="main.css">
-        <script src="components/navbar.js" defer></script>
+<body>
+    <nav-bar></nav-bar>
+    <div id="bluetop"></div>
 
-        <style>
-            #project-background {
-                margin: 0;
-                height: 300%;
-                width: 100%;
-                background-image: url('img/level.JPG');
-                background-size: cover;
-                background-position: center;
-                padding-top: 5px;
-                padding-bottom: 30px;
-                text-align: center;
-                font-size: 4.0em;
-                text-shadow: 0px 0px 15px #FFF;
-                color: black;
-            }
-
-            #wrapper1 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-            }
-            
-            #project-main {
-                background-color: white;
-                opacity: 0.9;
-                text-align: left;
-                padding: 50px;
-                width: 66%;
-                margin-bottom: 0;
-            }
-
-            #image-wrapper {
-                display: flex;
-                align-items: flex-start;
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: 70px;
-            }
-
-            .image {
-                width: 500px;
-                background-color: rgb(17, 115, 79);
-                color: white;
-                text-align: center;
-                margin: 20px;
-                border-radius: 8px;
-                overflow: hidden;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
-
-            .image > img {
-                width: 100%;
-                display: block;
-                background-color: #1a1a1a;
-            }
-
-            #steam-wrapper {
-                width: 100%;
-                margin: 0;
-            }
-            
-            #steam {
-                padding: 50px;
-                color: white;
-                text-align: center;
-                background-color: #0c2c5e;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <nav-bar></nav-bar>
-
-        <div id="bluetop"></div>
-
-        <div id="project-background">
-            <h1>Level Design</h1>
+    <!-- Banner -->
+    <div class="page-banner" style="background-image: url('img/level.JPG'); min-height: 300px;">
+        <div class="page-banner-content">
+            <h1>UE5 Level Design</h1>
+            <p class="page-banner-subtitle">Personal Project &bull; Level Design &bull; Unreal Engine 5</p>
         </div>
+    </div>
 
-        <div id="wrapper1">
-            <div id="project-main">
-                <h2>Unreal Engine 5 Level Design</h2>
-                <p></p>
-                <p>January 2026 - Present</p>
-                <p></p>
-                <p>Role: Level Designer</p>
-                <p>This page highlights the process I used to quickly prototype 3D environments and levels in Unreal Engine 5</p>
-                <p></p>
-                <p><strong>Highlights</strong></p>
-                <p></p>
-                <ul>
-                    <li>Quickly brainstormed and sketched different environments for creation in UE5</li>
-                    <p></p>                  
-                    <li>Used sketches to then quickly 'blockout' each environment in engine</li>
-                    <p></p>
-                    <li>Iterated on each blockout with 'blockmesh' to give a more detailed look to each environment</li>
-                </ul>            </div>
-        </div>
-
-        <div id="video-wrapper" style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            background-color: #0c2c5e;
-            padding: 3rem 0;
-        ">
-            <div id="video" style="
-                width: 66%;
-                max-width: 1200px;
-            ">
-                <iframe 
-                    width="100%" 
-                    height="500px" 
-                    src="https://www.youtube.com/embed/hKtptLMarGk" 
-                    title="Level Design Montage" 
-                    frameborder="0" 
-                    allowfullscreen
-                    style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                </iframe>
+    <!-- Project Overview -->
+    <div class="case-study-wrapper">
+        <div class="case-study-main">
+            <h2>Project Overview</h2>
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Solo Level Designer</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Team Size</span>
+                    <span class="meta-value">Solo</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeframe</span>
+                    <span class="meta-value">January 2026 – Present</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Engine / Tools</span>
+                    <span class="meta-value">Unreal Engine 5</span>
+                </div>
             </div>
+
+            <p>
+                This project highlights the iterative pipeline I use to prototype 3D environments in Unreal Engine 5 —
+                from initial concept sketches through blockout and into refined blockmesh. The goal is to rapidly test
+                and communicate spatial ideas before committing time to full asset production.
+            </p>
+
+            <h2>Design Goals</h2>
+            <p>
+                Each environment should communicate a clear player flow and a sense of place using only primitive geometry.
+                The process prioritizes <strong>speed of iteration</strong>: a layout should be testable within a session
+                and improvable based on what that test reveals. Visual polish is intentionally deferred until the
+                core spatial experience is validated.
+            </p>
+
+            <h2>Highlights</h2>
+            <ul>
+                <li>Sketched and refined environment concepts before touching the engine</li>
+                <li>Translated 2D sketches into rapid 3D blockouts in UE5</li>
+                <li>Iterated each blockout into a blockmesh pass with more architectural detail</li>
+                <li>Tested player movement, sightlines, and scale at each stage</li>
+            </ul>
+
+            <h2>Design Process</h2>
+
+            <h3>1. Conceptualization</h3>
+            <p>
+                The process begins with quick sketches and rough top-down layouts. These establish the core flow —
+                major pathways, focal points, chokepoints — before any engine work begins. Sketching is cheap;
+                it is the fastest way to explore and discard ideas.
+            </p>
+
+            <h3>2. Initial Blockout</h3>
+            <p>Using basic geometric shapes in UE5, I build a rough 3D representation of the environment focusing on:</p>
+            <ul>
+                <li>Establishing correct scale and proportions relative to a character capsule</li>
+                <li>Defining major pathways and intended sightlines</li>
+                <li>Verifying basic player movement and navigation feel</li>
+            </ul>
+
+            <h3>3. Blockmesh Refinement</h3>
+            <p>The blockout is refined into a blockmesh — still abstract, but with more defined surfaces:</p>
+            <ul>
+                <li>Architectural details that communicate function (stairs, walls, cover)</li>
+                <li>Preliminary lighting to test atmosphere and readability</li>
+                <li>Playtesting to confirm spatial flow before any assets are placed</li>
+            </ul>
+
+            <h3>4. Iteration</h3>
+            <p>Each stage feeds back into the previous one. Playtesting a blockout often reveals a layout issue that
+            is much cheaper to fix at the sketch stage. This loop — sketch, build, test, revise — is the core of
+            the process.</p>
         </div>
+    </div>
 
-        <div id="image-wrapper">
-            <div class="image">
-                <img src="img/level.JPG" alt="UE5 Level Overview">
-            </div>
-            <div class="image">
-                <img src="img/environ.jpg" alt="Environment Detail">
-            </div>
+    <!-- Video -->
+    <div style="display:flex; align-items:center; justify-content:center; background-color:#0c2c5e; padding: 3rem 1.5rem;">
+        <div style="width:100%; max-width:900px;">
+            <iframe
+                width="100%"
+                height="500"
+                src="https://www.youtube.com/embed/hKtptLMarGk"
+                title="Level Design Process Montage"
+                frameborder="0"
+                allowfullscreen
+                style="border-radius:10px; box-shadow: 0 4px 16px rgba(0,0,0,0.4); display:block;">
+            </iframe>
         </div>
+    </div>
 
-        <div id="wrapper1">
-            <div id="project-main" style="margin-top: 70px;">
-                <h2>Design Process</h2>
-                <p>My approach to level design in Unreal Engine 5 follows an iterative process that emphasizes rapid prototyping and continuous refinement:</p>
-                
-                <h3>1. Conceptualization</h3>
-                <p>The process begins with quick sketches and rough layouts. These initial drawings help establish the core flow and focal points of each environment, allowing me to experiment with different ideas rapidly before committing to the 3D space.</p>
-
-                <h3>2. Initial Blockout</h3>
-                <p>Using basic geometric shapes in UE5, I create a rough 3D representation of the environment. This stage focuses on:</p>
-                <ul>
-                    <li>Establishing proper scale and proportions</li>
-                    <li>Defining major pathways and sight lines</li>
-                    <li>Testing basic player movement and navigation</li>
-                </ul>
-
-                <h3>3. Blockmesh Refinement</h3>
-                <p>The blockout is then refined using more detailed blockmesh geometry. This phase involves:</p>
-                <ul>
-                    <li>Adding architectural details while maintaining simplified forms</li>
-                    <li>Implementing preliminary lighting to test atmosphere</li>
-                    <li>Playtesting to ensure smooth player flow through the space</li>
-                </ul>
-
-                <h3>4. Iteration and Polish</h3>
-                <p>Each environment goes through multiple iteration cycles, where I:</p>
-                <ul>
-                    <li>Gather feedback and identify areas for improvement</li>
-                    <li>Adjust layout and flow based on playtesting results</li>
-                    <li>Refine the visual composition and spatial relationships</li>
-                </ul>
-            </div>
+    <!-- Screenshots -->
+    <div class="image-gallery">
+        <div class="gallery-img">
+            <img src="img/level.JPG" alt="UE5 level overview">
         </div>
+        <div class="gallery-img">
+            <img src="img/environ.jpg" alt="Environment detail">
+        </div>
+    </div>
 
-        <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
-    </body>
+    <div id="footer">
+        <p>Copyright &copy; 2026 Jacob Scott &mdash; All images, logos, and names used with permission</p>
+    </div>
+</body>
 </html>

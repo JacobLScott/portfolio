@@ -1,203 +1,229 @@
 <!DOCTYPE html>
-<html>
-
-
+<html lang="en">
 <head>
-    <title>Jacob Scott | Resume</title>    <link rel="stylesheet" href="main.css">
-    <script src="components/navbar.js" defer></script>
-
+    <title>Jacob Scott | Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        
-        body{
-            margin: 0px;
+        body {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', serif;
+            background: #f0f0f0;
         }
-        h2{
+
+        #main {
+            max-width: 780px;
+            margin: 2rem auto;
+            padding: 2.5rem 3rem;
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+        }
+
+        #contact {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 0.3rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #385FBA;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.2rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+            margin: 0.8rem 0 0;
+        }
+
+        h4 {
+            font-size: 0.9rem;
+            font-weight: normal;
+            font-style: italic;
+            color: #555;
+            margin: 0.1rem 0;
+        }
+
+        p {
+            margin: 0.3rem 0 0.5rem;
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+
+        p.date {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        ul, ol {
+            margin: 0.3rem 0 0.6rem;
+            padding-left: 1.4rem;
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+
+        li {
+            margin-bottom: 0.2rem;
+        }
+
+        a {
             color: #385FBA;
         }
-        
-        #main{
-            width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 15px;
 
-            background-image: url('img/paper3.avif');
-            background-position: center;
-            /* background-size: cover; */
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 0.8rem 0;
         }
 
-        #contact{
-            text-align: center;
-            padding-top: 15px;
+        .contact-line {
+            font-size: 0.9rem;
+            color: #444;
         }
-
     </style>
 </head>
-
-
 <body>
-    
-    
 <div id="main">
-    
+
     <div id="contact">
-    <h1>Jacob Scott</h1>
-
-    <h3>Bridgewater, NJ 08807</h3>
-
-    <h3>908-240-3693</h3>
-
-    <h3><a href="mailto:jlscott@usc.edu">jlscott@usc.edu</a></h3>
+        <h1>Jacob Scott</h1>
+        <p class="contact-line">
+            Bridgewater, NJ &nbsp;&bull;&nbsp;
+            <a href="mailto:jacobscott03@gmail.com">jacobscott03@gmail.com</a>
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.linkedin.com/in/jacob-scott-3a26aa23b" target="_blank">linkedin.com/in/jacob-scott-3a26aa23b</a>
+        </p>
     </div>
 
     <hr>
 
     <h2>Objective</h2>
-
-    <p>I am an aspiring game developer and game user researcher. I hope to create experiences that provide meaningful challenges to players of all skill levels through strategy and tactics games.</p>
+    <p>
+        I am an aspiring game designer and games user researcher focused on creating engaging experiences
+        through strategy and tactics games. I hope to provide meaningful challenges to players of all skill
+        levels through smart enemy design, iterative level design, and player experience research.
+    </p>
 
     <h2>Education</h2>
-
-    <h4>University of Southern California, Los Angeles, CA</h4>
-
-    <p>May 2025</p>
-
-    <ul>
-        <li>
-            B.A. Interactive Media and Game Design 
-        </li>
-    </ul>
+    <h3>University of Southern California &mdash; Los Angeles, CA</h3>
+    <h4>B.A. Interactive Media and Game Design &nbsp;&bull;&nbsp; <em>Cum Laude</em></h4>
+    <p class="date">May 2025</p>
+    <p>USC School of Cinematic Arts &mdash; Interactive Media &amp; Games Division</p>
 
     <h2>Experience</h2>
 
-    <h4>Game Designer</h4>
-
-    <p><em>University of Southern California</em></p>
-
-    <p>2021 - Present</p>
-
+    <h3>Game Designer</h3>
+    <h4>University of Southern California</h4>
+    <p class="date">2021 – Present</p>
     <ol>
         <li>
-            <em>Chimken Crusade</em> - 2022
+            <em>Unchained: Tale of Enra</em> &mdash; 2024–Present
             <ul>
-                <li>Prototyped concept and <strong>all</strong> gameplay.</li>
-                <li>Designed <strong>all</strong> enemies and levels.</li>
-                <li>Worked as one of two team members.</li>
+                <li>Designed and balanced Negotiation system, combat systems, enemy AI, and character abilities.</li>
+                <li>Greyboxed and implemented Conflicts (levels) including the 1-4 defense map.</li>
+                <li>Served as Lead User Researcher; conducted 100+ playtests and reported findings to the team.</li>
+                <li>Designed and implemented the game's tutorial sequence.</li>
+                <li>One of 4 designers on a team of 50+ developers.</li>
             </ul>
         </li>
         <li>
-            <em>Rock, Paper, Scissors, Shoot!</em> - 2023
+            <em><a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank">Bugnauts!</a></em> &mdash; 2023–2024
             <ul>
-                <li>Prototyped gameplay.</li>
-                <li>Designed enemies and levels.</li>
-                <li>Worked as one of four team members.</li>
+                <li>Prototyped enemy attack patterns and AI behavior trees in Unreal Engine 5.</li>
+                <li>Greyboxed early level layouts; wrote and maintained design documents.</li>
+                <li>One of 3 designers on a team of 40+ developers.</li>
             </ul>
         </li>
         <li>
-            <em><a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank">Bugnauts!</a></em> - 2023-2024
+            <em>Rock, Paper, Scissors, Shoot!</em> &mdash; 2023
             <ul>
-                <li>Prototyped extensively on enemy attack patterns and AI.</li>
-                <li>Prototyped level design.</li>
-                <li>Wrote and managed design documents.</li>
-                <li>Worked as one of 4 designers on a team of 50+ people.</li>
+                <li>Prototyped gameplay; designed enemies and levels. One of four team members.</li>
             </ul>
         </li>
         <li>
-            <em>Project Box Garden</em> - 2024 - Present
+            <em>Chimken Crusade</em> &mdash; 2022
             <ul>
-                <li>Level, system, UI, and enemy design.</li>
-                <li>Currently working as one of 4 designers on a team of 50+ people.</li>
+                <li>Prototyped concept and all gameplay; designed all enemies and levels. One of two team members.</li>
             </ul>
         </li>
     </ol>
 
-    <h4>Games User Researcher</h4>
-
-    <p><em>University of Southern California</em></p>
-
-    <p>2023 - Present</p>
-
+    <h3>Games User Researcher</h3>
+    <h4>University of Southern California</h4>
+    <p class="date">2023 – Present</p>
     <ol>
         <li>
-            <em><a href="https://store.steampowered.com/app/2858400/Bugnauts/">Bugnauts!</a></em> - 2023-2024
+            <em>Unchained: Tale of Enra</em> &mdash; 2024–Present
             <ul>
-                <li>Assisted in playtest conduction and reporting.</li>
-                <li>Worked as 1 of 2 User Researchers.</li>
+                <li>Lead and sole user researcher. Conducted 100+ playtests across systems, levels, and UI.</li>
+                <li>Maintained a playtest log and presented data-driven findings each sprint.</li>
             </ul>
         </li>
         <li>
-            <em>Project Box Garden</em> - 2024 - Present
+            <em><a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank">Bugnauts!</a></em> &mdash; 2023–2024
             <ul>
-                <li>Conducted hundreds of playtests.</li>
-                <li>Relayed numerous playtest information to the design team for future iteration.</li>
-                <li>Currently working as the lead and sole user researcher.</li>
+                <li>Assisted in playtesting conduction and reporting. One of 2 user researchers.</li>
             </ul>
         </li>
     </ol>
 
-    <h4>Engineer and Programmer</h4>
-
-    <p><em>University of Southern California</em></p>
-
-    <p>2022 - 2024</p>
-
+    <h3>Engineer &amp; Programmer</h3>
+    <h4>University of Southern California</h4>
+    <p class="date">2022 – 2024</p>
     <ol>
         <li>
-            <em>Chimken Crusade</em> - 2022
+            <em>Chimken Crusade</em> &mdash; 2022
             <ul>
-                <li>Sole gameplay engineer.</li>
-                <li>Implemented mechanics and enemies.</li>
+                <li>Sole gameplay engineer; implemented all mechanics and enemies in Unity.</li>
             </ul>
         </li>
         <li>
-            <em>Rock, Paper, Scissors, Shoot!</em> - 2023
+            <em>Rock, Paper, Scissors, Shoot!</em> &mdash; 2023
             <ul>
-                <li>Implemented mechanics and enemies.</li>
-                <li>One of two engineers.</li>
+                <li>Implemented mechanics and enemies. One of two engineers.</li>
             </ul>
         </li>
         <li>
-            <em><a href="https://store.steampowered.com/app/2858400/Bugnauts/">Bugnauts!</a></em> - 2023-2024
+            <em><a href="https://store.steampowered.com/app/2858400/Bugnauts/" target="_blank">Bugnauts!</a></em> &mdash; 2023–2024
             <ul>
-                <li>Implemented enemy AI.</li>
+                <li>Implemented enemy AI using UE5 Blueprints and Behavior Trees.</li>
             </ul>
         </li>
     </ol>
 
     <h2>Skills</h2>
 
-    <h3>Game Development</h3>
-
+    <h3>Game Design</h3>
     <ul>
-        <li>Game Prototyping</li>
-        <li>Level + Map Design</li>
-        <li>Systems Design</li>
-        <li>Enemy Design</li>
+        <li>Game Prototyping &amp; Systems Design</li>
+        <li>Level &amp; Map Design</li>
+        <li>Enemy Design &amp; AI Design</li>
         <li>Design Documentation</li>
-        <li>Playtest Conductor + Reporter</li>
+        <li>Playtesting Conduction &amp; Reporting</li>
+        <li>Player Experience Analysis</li>
     </ul>
-    
+
     <h3>Game Engines</h3>
-
     <ul>
-        <li>
-            Unity
-        </li>
-        <li>
-            Unreal Engine 5
-        </li>
+        <li>Unity</li>
+        <li>Unreal Engine 5 (Blueprints)</li>
     </ul>
-    
-    <h3>Programming Languages</h3>
 
+    <h3>Programming</h3>
     <ul>
-        <li>Python</li>
         <li>C#</li>
-        <li>HTML</li>
+        <li>Python</li>
+        <li>HTML / CSS</li>
     </ul>
-</div><!-- #main -->
 
+</div>
 </body>
 </html>

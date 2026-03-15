@@ -1,296 +1,157 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Jacob Scott</title>
-        <meta charset="UTF-8">
-        <meta name="description" content="Homepage of Jacob Scott's 2026 portfolio site. This is meant to be shown to recruiters when interviewing for various game development studios. Page gives a general overview of the candidate and shows the games the candidate has worked on.">
-        <meta name="keywords" content="HTML, CSS">
-        <meta name="author" content="Jacob Scott">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <title>Jacob Scott | Game Designer</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio of Jacob Scott — Game Designer and Games User Researcher. USC School of Cinematic Arts, B.A. Interactive Media & Game Design, 2025 (Cum Laude).">
+    <meta name="author" content="Jacob Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="components/navbar.js" defer></script>
+</head>
 
-        <Link rel="stylesheet" href="main.css">
-        <script src="components/navbar.js" defer></script>
+<body>
+    <nav-bar></nav-bar>
 
-        <style>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+        <p class="hero-title">Game Designer &bull; Games User Researcher</p>
+        <h1 class="hero-name">Jacob Scott</h1>
+        <p class="hero-subtitle">USC School of Cinematic Arts &mdash; Interactive Media &amp; Games Division<br>B.A. Interactive Media &amp; Game Design, 2025 &nbsp;&middot;&nbsp; Cum Laude</p>
+        <p class="hero-bio">
+            Jacob Scott is a game designer focused on strategy-driven gameplay and player experience.
+            He has worked on commercial USC Games titles as both a designer and lead user researcher,
+            specializing in enemy behavior, level design, and iterative playtesting on teams of 50+ developers.
+        </p>
+        <div class="hero-actions">
+            <a href="#projects" class="cta-btn cta-btn-primary">View Projects</a>
+            <a href="Jacob_Scott_Resume.pdf" target="_blank" class="cta-btn cta-btn-secondary">Download Resume</a>
+            <a href="page_contact.html" class="cta-btn cta-btn-secondary">Contact</a>
+        </div>
+    </section>
 
-            #trailer-wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            #trailer {
-                height: 100%;
-                width: 100%;
-            }
-
-            #trailer iframe {
-                height: 500px;
-                width: 100%;
-            }            #aboutme {
-                margin: 0;
-                padding: 2rem 15%;
-                color: white;
-                text-align: center;
-                background-color: #0c2c5e;
-                max-width: 100%;
-            }
-
-            #professional {
-                text-align: center;
-                color: white;
-                height: 100px;
-                background-color: black;
-                padding-top: 5px;
-                font-size: 1.2em;
-            }            #professional-wrapper, #personal-wrapper {
-                display: flex;
-                align-items: stretch;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 2rem;
-                margin: 2rem auto;
-                max-width: 1400px;
-                padding: 0 1rem;
-            }
-
-            a {
-                color: white;
-                text-decoration: none;
-            }            .project-image {
-                flex: 1;
-                min-width: 280px;
-                max-width: 350px;
-                height: 300px;
-                background-color: #1a1a1a;
-                color: white;
-                text-align: center;
-                position: relative;
-                border-radius: 12px;
-                overflow: hidden;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-
-            .project-image:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            }
-
-            .project-image > img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: all 0.3s ease;
-                display: block;
-            }
-
-            .project-overlay {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
-                color: white;
-                opacity: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 2rem;
-                text-align: center;
-                transition: all 0.3s ease;
-            }
-
-            .project-overlay h3 {
-                margin: 0 0 1rem 0;
-                font-size: 1.75rem;
-                transform: translateY(20px);
-                transition: transform 0.3s ease;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            }
-
-            .project-overlay p {
-                opacity: 0;
-                transform: translateY(10px);
-                transition: all 0.3s ease;
-                margin: 0;
-                font-size: 1.1rem;
-                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            }
-
-            .project-image:hover .project-overlay {
-                opacity: 1;
-            }
-
-            .project-image:hover .project-overlay h3 {
-                transform: translateY(0);
-            }
-
-            .project-image:hover .project-overlay p {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            .project-image:hover img {
-                transform: scale(1.05);
-                filter: brightness(0.4);
-            }
-
-            #personal, #professional {
-                text-align: center;
-                color: white;
-                padding: 2rem 0;
-                background-color: black;
-                font-size: 1.2em;
-            }
-
-            @media (max-width: 768px) {
-                #professional-wrapper, #personal-wrapper {
-                    gap: 1.5rem;
-                    padding: 0 1rem;
-                }
-
-                .project-image {
-                    min-width: 100%;
-                    margin: 0;
-                }
-            }
-
-            h2 {
-                font-size: 2.0em;
-            }
-
-        </style>
-
-    </head>
-
-    <body>
-        <nav-bar></nav-bar>
-        <div id="bluetop"></div>
-
-       <div id="trailer-wrapper">
-
-        <div id="trailer">
-
-            <iframe src="https://www.youtube.com/embed/KZeCF1uGaYk?si=6sst4iHmOsb2F_2bautoplay=1&mute=1" title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
-
+    <!-- ===================== FEATURED PROJECTS ===================== -->
+    <section id="projects">
+        <div class="section-label">
+            <h2>Featured Projects</h2>
+            <div class="section-divider"></div>
+            <p>Commercial USC Games titles &amp; original work</p>
         </div>
 
-       </div> <!--trailer-wrapper-->
-       
-    
-        <div id="aboutme">
+        <div class="projects-grid">
 
-            <h1>About Me</h1>
-            <p>Hi! I'm Jacob, a game designer and user experience researcher from New Jersey. I've been making and touuching up games since middle school. I have a fascination for turn-based tactics games and am about to wrap up development on one through an opportunity at the USC Games program. I am graduating this semester from USC with a BA in Interactive Media and Game Development.</p>
-
-            <p>Here are a few of the projects I've had the opportunity to work on throughout my college career, as well as some personal projects I've developed for fun. I am primarily interested in the moment-to-moment gameplay and decisions that people make while playing games and hope to create engaging games that challenge players' critical-thinking skills.</p>
-
-        </div> <!--aboutme-->
-
-        <div id="professional">
-
-            <h2>Professional Projects</h2>
-
-        </div> <!--professional-->        <div id="professional-wrapper">
-            <div class="project-image">
-                <img src="img/Unchained_Logo.png" alt="Unchained Logo" loading="lazy">
-                <a href="page_unchained.html" class="project-overlay">
+            <a href="page_unchained.html" class="project-card">
+                <img src="img/Unchained_Logo.png" alt="Unchained: Tale of Enra logo" class="project-card-thumb" style="object-fit: contain; background-color: #0c1428; padding: 1rem;">
+                <div class="project-card-body">
+                    <span class="project-card-tag">USC Games &bull; Tactical RPG &bull; Unity</span>
                     <h3>Unchained: Tale of Enra</h3>
-                    <p>A tactical RPG where players can choose to make peace with the enemy in turn-based battles, or not</p>
-                </a>
-            </div>
+                    <p>A commercial tactical RPG featuring a unique Negotiation system. Contributed enemy AI design, level design, 100+ playtests, and served as lead user researcher on a 50+ person team.</p>
+                    <span class="project-card-link">View Case Study</span>
+                </div>
+            </a>
 
-            <div class="project-image">
-                <img src="img/Bugnauts.png" alt="Bugnauts! image" loading="lazy">
-                <a href="page_bugnauts.html" class="project-overlay">
+            <a href="page_bugnauts.html" class="project-card">
+                <img src="img/Bugnauts.png" alt="Bugnauts! title screen" class="project-card-thumb">
+                <div class="project-card-body">
+                    <span class="project-card-tag">USC Games &bull; 3D Action &bull; Unreal Engine 5</span>
                     <h3>Bugnauts!</h3>
-                    <p>A 3D action game about the restoration of an island ecosystem</p>
-                </a>
-            </div>
-        </div> <!--professional-wrapper-->
+                    <p>A 3D action game about ecosystem restoration. Designed enemy AI behavior trees, bullet attack patterns, and level greyboxes as one of 3 designers on a 40+ person team.</p>
+                    <span class="project-card-link">View Case Study</span>
+                </div>
+            </a>
 
+            <a href="page_level_design.html" class="project-card">
+                <img src="img/level.JPG" alt="Unreal Engine 5 level design screenshot" class="project-card-thumb">
+                <div class="project-card-body">
+                    <span class="project-card-tag">Personal &bull; Level Design &bull; Unreal Engine 5</span>
+                    <h3>UE5 Level Design</h3>
+                    <p>A personal study in rapid 3D environment prototyping — from pencil sketch, to blockout, to refined blockmesh — demonstrating an iterative level design pipeline in Unreal Engine 5.</p>
+                    <span class="project-card-link">View Case Study</span>
+                </div>
+            </a>
 
-        <div id="personal">
+        </div>
+    </section>
 
-            <h2>Personal Projects</h2>
+    <!-- ===================== SKILLS ===================== -->
+    <section class="skills-section">
+        <h2>Skills &amp; Tools</h2>
+        <div class="skills-grid">
+            <span class="skill-chip">Game Design</span>
+            <span class="skill-chip">Level Design</span>
+            <span class="skill-chip">Enemy &amp; Systems Design</span>
+            <span class="skill-chip">Playtesting &amp; User Research</span>
+            <span class="skill-chip">Player Experience Analysis</span>
+            <span class="skill-chip">Design Documentation</span>
+            <span class="skill-chip">Gameplay Prototyping</span>
+            <span class="skill-chip">Unity</span>
+            <span class="skill-chip">Unreal Engine 5</span>
+            <span class="skill-chip">UE Blueprints</span>
+            <span class="skill-chip">C#</span>
+            <span class="skill-chip">Paper Prototyping</span>
+        </div>
+    </section>
 
-        </div> <!--personal-->        <div id="personal-wrapper">            <div class="project-image">
-                <img src="img/level.JPG" alt="UE5 Level image" loading="lazy">
-                <a href="page_level_design.html" class="project-overlay">
-                    <h3>Unreal Engine 5 Level Design</h3>
-                    <p>Custom 3D level design in UE5</p>
-                </a>
-            </div>
+    <!-- ===================== MORE PROJECTS ===================== -->
+    <section>
+        <div class="section-label">
+            <h2>More Projects</h2>
+            <div class="section-divider"></div>
+        </div>
 
-            <div class="project-image">
-                <img src="img/fe_mod.JPG" alt="Fire Emblem Mod image" loading="lazy">
-                <a href="page_fireEmblemModding.html" class="project-overlay">
-                    <h3>Reverse Engineering Fire Emblem</h3>
-                    <p>Highlights modifications made to change the player's experience</p>
-                </a>
-            </div>            <div class="project-image">
-                <img src="img/chimken/chimken_title.png" alt="Chimken Crusade Title" loading="lazy" style="object-position: left center;">
-                <a href="page_chimken_crusade.html" class="project-overlay">
+        <div class="projects-grid">
+
+            <a href="page_chimken_crusade.html" class="project-card small">
+                <img src="img/chimken/lvl1.PNG" alt="Chimken Crusade level screenshot" class="project-card-thumb">
+                <div class="project-card-body">
+                    <span class="project-card-tag">Personal &bull; Unity</span>
                     <h3>Chimken Crusade</h3>
-                    <p>A 2D top-down retro-style adventure game</p>
-                </a>
-            </div>
+                    <p>A 2D bullet hell adventure built in Unity over 12 weeks with one partner. Designed and programmed all enemies, levels, and dialogue.</p>
+                    <span class="project-card-link">View Case Study</span>
+                </div>
+            </a>
 
-            <div class="project-image">
-                <img src="img/rps/title.png" alt="Rock, Paper, Scissors, Shoot! Title" loading="lazy">
-                <a href="page_rps.html" class="project-overlay">
+            <a href="page_fireEmblemModding.html" class="project-card small">
+                <img src="img/fe/fea_map.jpg" alt="Fire Emblem map" class="project-card-thumb">
+                <div class="project-card-body">
+                    <span class="project-card-tag">Personal &bull; Modding</span>
+                    <h3>Reverse Engineering Fire Emblem</h3>
+                    <p>Custom maps, characters, mechanics, and balance patches across GBA, DS, 3DS, and Switch Fire Emblem titles.</p>
+                    <span class="project-card-link">View Case Study</span>
+                </div>
+            </a>
+
+            <a href="page_rps.html" class="project-card small">
+                <img src="img/paper3.avif" alt="Rock Paper Scissors Shoot title" class="project-card-thumb" style="object-fit: cover;">
+                <div class="project-card-body">
+                    <span class="project-card-tag">Personal &bull; Unity</span>
                     <h3>Rock, Paper, Scissors, Shoot!</h3>
-                    <p>A 2D top-down bullet-hell game</p>
-                </a>
-            </div>        </div> <!--personal-wrapper-->
+                    <p>A top-down bullet hell designed and prototyped in 3 weeks with a team of 4. Implemented player movement, enemies, and weapon UI.</p>
+                    <span class="project-card-link">View Case Study</span>
+                </div>
+            </a>
 
-        <div id="contact" style="
-            margin: 0;
-            padding: 2rem 15%;
-            color: white;
-            text-align: center;
-            background-color: #0c2c5e;
-            max-width: 100%;
-        ">
-            <h2>Contact Me</h2>
-            <p></p>
-            <p style="margin-top: 1.5rem;">
-                <a href="https://www.linkedin.com/in/jacob-scott-3a26aa23b" target="_blank" style="
-                    display: inline-block;
-                    padding: 0.8rem 1.5rem;
-                    margin: 0 1rem;
-                    background-color: #0077b5;
-                    border-radius: 8px;
-                    transition: background-color 0.3s ease;
-                ">LinkedIn</a>
-                <a href="mailto:jacobscott03@gmail.com" style="
-                    display: inline-block;
-                    padding: 0.8rem 1.5rem;
-                    margin: 0 1rem;
-                    background-color: #2a2a2a;
-                    border-radius: 8px;
-                    transition: background-color 0.3s ease;
-                ">Email</a>
-            </p>
         </div>
+    </section>
 
-        <div id="footer">
-            <p>Copyright © 2026 by Jacob Scott | All images, logos and names are used with permission</p>
+    <!-- ===================== CONTACT STRIP ===================== -->
+    <section style="background-color: #0c2c5e; padding: 2.5rem 2rem; text-align: center;">
+        <h2 style="margin: 0 0 0.5rem; color: #fff; font-size: 1.4rem;">Get in Touch</h2>
+        <p style="color: #aac; margin: 0 0 1.5rem; font-size: 0.95rem;">Open to game design and user research roles at game studios.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="mailto:jacobscott03@gmail.com" class="cta-btn cta-btn-primary">Email Me</a>
+            <a href="https://www.linkedin.com/in/jacob-scott-3a26aa23b" target="_blank" class="cta-btn cta-btn-secondary">LinkedIn</a>
+            <a href="page_contact.html" class="cta-btn cta-btn-secondary">All Contact Info</a>
         </div>
+    </section>
 
-        <script>
-            document.querySelector('.menu-toggle').addEventListener('click', function() {
-                document.getElementById('top-menu').classList.toggle('active');
-            });
-        </script>
-    </body>
+    <div id="footer">
+        <p>Copyright &copy; 2026 Jacob Scott &mdash; All images, logos, and names used with permission</p>
+    </div>
 
-
+</body>
 </html>

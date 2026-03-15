@@ -1,121 +1,93 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Jacob Scott | Rock, Paper, Scissors, Shoot!</title>
-        <meta charset="UTF-8">
-        <meta name="description" content="Child page of Jacob Scott's portfolio site. Contains detailed information about Rock, Paper, Scissors, Shoot!, a top-down bullet hell game.">
-        <meta name="keywords" content="HTML, CSS, Game Development">
-        <meta name="author" content="Jacob Scott">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <title>Jacob Scott | Rock, Paper, Scissors, Shoot!</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Case study: Rock, Paper, Scissors, Shoot! — a top-down bullet hell designed and programmed by Jacob Scott in Unity.">
+    <meta name="author" content="Jacob Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="components/navbar.js" defer></script>
 
-        <Link rel="stylesheet" href="main.css">
-        <script src="components/navbar.js" defer></script>
+    <style>
+        .rps-hero-banner {
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%);
+        }
+    </style>
+</head>
 
-        <style>
-            #project-background {
-                margin: 0;
-                height: 300%;
-                width: 100%;
-                background-image: url('img/rps_placeholder.jpg');
-                background-size: cover;
-                background-position: center;
-                padding-top: 5px;
-                padding-bottom: 30px;
-                text-align: center;
-                font-size: 4.0em;
-                text-shadow: 0px 0px 15px #FFF;
-                color: black;
-            }
+<body>
+    <nav-bar></nav-bar>
+    <div id="bluetop"></div>
 
-            #wrapper1 {
-                display: flex;
-                flex-direction: flex-start;
-                justify-content: center;
-            }
-            
-            #project-main {
-                background-color: white;
-                opacity: 0.9;
-                text-align: left;
-                padding: 50px;
-                height: 100%;
-                width: 66%;                margin-bottom: 0px;
-            }
-
-            #image-wrapper {
-                display: flex;
-                align-items: flex-start;
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: 70px;
-            }
-
-            .image {
-                height: 300px;
-                width: 400px;
-                background-color: rgb(17, 115, 79);
-                color: white;
-                text-align: center;
-                margin-right: 100px;
-                margin-left: 100px;
-                margin-bottom: 70px;
-                object-fit: cover;
-            }
-
-            .image > img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        </style>
-    </head>
-    <body>
-        <nav-bar></nav-bar>
-
-        <div id="bluetop"></div>
-
-        <div id="project-background">
+    <!-- Banner -->
+    <div class="page-banner rps-hero-banner" style="min-height: 280px;">
+        <div class="page-banner-content">
             <h1>Rock, Paper, Scissors, Shoot!</h1>
+            <p class="page-banner-subtitle">Personal Project &bull; Designer &bull; Programmer &bull; Unity</p>
         </div>
+    </div>
 
-        <div id="wrapper1">
-            <div id="project-main">
-                <h2>Rock, Paper, Scissors, Shoot!</h2>
-                <p></p>
-                <p>December 2022</p>
-                <p></p>
-                <p>Role: Designer, Programmer</p>                <p>In this top-down bullet hell, players must master the power of rock, paper, and scissors to win back their school. Three gangs of 5th graders rule this school: The Rock Resistance, the Paper Platoon and the Scissor Squad. You and Billy, the only 2nd graders willing to take on this diabolical menace, must master each of the three weapon types to beat the leaders of each gang and save the school.</p>
-                <p></p>
-                <p>Rock, Paper, Scissors, Shoot! was developed in Unity in the span of 3 weeks as a final project for a class. I worked with a team of 4 people and was one of 2 members in charge of programming and design. The goal was to create a silly but lighthearted bullet hell where players had to manage cooldowns of different abilities. We succeeded in this goal, as each fight becomes drastically more difficult when not using every weapon type - much like a real game of RPS!</p>
-                <p></p>
-                <p><strong>Contributions</strong></p>
-                <p></p>
-                <ul>
-                    <li>Prototyped and implemented player movement, 3 different basic enemy types, 1 boss enemy, and 2 obstacles</li>
-                    <p></p>
-                    <li>Created and implemented weapon and health bar UI</li>
-                    <p></p>                    <li>Implemented weapon sound effects and music</li>
-                </ul>
-
-                <div id="image-wrapper">
-                    <div class="image">
-                        <a href="img/rps/gameplay.jpg" data-lightbox="rps" data-title="Gameplay Screenshot">
-                            <img src="img/rps/gameplay.jpg" alt="RPS Gameplay">
-                        </a>
-                    </div>
-                    <div class="image">
-                        <a href="img/rps/combat.jpg" data-lightbox="rps" data-title="Combat System">
-                            <img src="img/rps/combat.jpg" alt="Combat System">
-                        </a>
-                    </div>
+    <!-- Project Overview -->
+    <div class="case-study-wrapper">
+        <div class="case-study-main">
+            <h2>Project Overview</h2>
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Designer &amp; Programmer</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Team Size</span>
+                    <span class="meta-value">4 people</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeframe</span>
+                    <span class="meta-value">December 2022<br>(3 weeks)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Engine</span>
+                    <span class="meta-value">Unity</span>
                 </div>
             </div>
-        </div>
 
-        <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
-    </body>
+            <p>
+                In this top-down bullet hell, players must master the power of rock, paper, and scissors to
+                reclaim their school. Three gangs of 5th graders have taken over — The Rock Resistance,
+                the Paper Platoon, and the Scissor Squad. Players and Billy, the only brave 2nd graders willing
+                to fight back, must master each weapon type to defeat each gang's leader.
+            </p>
+            <p>
+                The game was built in 3 weeks as a class final project. I was one of two members responsible
+                for both programming and design. The core challenge: make each weapon type feel necessary by
+                designing encounters where ignoring any one of them dramatically increases difficulty — just
+                like a real game of RPS.
+            </p>
+
+            <h2>Design Goals</h2>
+            <p>
+                The goal was a <strong>silly but mechanically honest</strong> bullet hell where cooldown management
+                across three weapon types creates genuine strategic decisions. Each boss should be noticeably easier
+                when engaged with the correct counter-weapon, giving players a clear incentive to learn and rotate
+                their arsenal rather than relying on one approach.
+            </p>
+
+            <h2>My Contributions</h2>
+            <ul>
+                <li>Prototyped and implemented player movement, 3 basic enemy types, 1 boss, and 2 obstacle types</li>
+                <li>Designed the weapon cooldown system to ensure all three weapon types felt useful</li>
+                <li>Built the weapon and health bar UI</li>
+                <li>Implemented weapon sound effects and background music</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>Copyright &copy; 2026 Jacob Scott &mdash; All images, logos, and names used with permission</p>
+    </div>
+</body>
 </html>

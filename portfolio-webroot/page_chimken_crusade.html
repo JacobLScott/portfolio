@@ -1,134 +1,96 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Jacob Scott | Chimken Crusade</title>
-        <meta charset="UTF-8">
-        <meta name="description" content="Child page of Jacob Scott's portfolio site. Contains detailed information about Chimken Crusade, a 2D autoscrolling bullet hell game.">
-        <meta name="keywords" content="HTML, CSS, Game Development">
-        <meta name="author" content="Jacob Scott">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <title>Jacob Scott | Chimken Crusade</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Case study: Chimken Crusade — a 2D bullet hell adventure designed and programmed by Jacob Scott in Unity.">
+    <meta name="author" content="Jacob Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="components/navbar.js" defer></script>
+</head>
 
-        <Link rel="stylesheet" href="main.css">
-        <script src="components/navbar.js" defer></script>
+<body>
+    <nav-bar></nav-bar>
+    <div id="bluetop"></div>
 
-        <style>
-            #project-background {
-                margin: 0;
-                height: 300%;
-                width: 100%;
-                background-image: url('img/chimken/lvl1.PNG');
-                background-size: cover;
-                background-position: center;
-                padding-top: 5px;
-                padding-bottom: 30px;
-                text-align: center;
-                font-size: 4.0em;
-                text-shadow: 0px 0px 15px #FFF;
-                color: black;
-            }            #wrapper1 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-            }
-            
-            #project-main {
-                background-color: white;
-                opacity: 0.9;
-                text-align: left;
-                padding: 50px;
-                width: 66%;
-                margin-bottom: 0;
-            }
-
-            #image-wrapper {
-                display: flex;
-                align-items: flex-start;
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: 70px;
-            }            .image {
-                width: 500px;
-                background-color: rgb(17, 115, 79);
-                color: white;
-                text-align: center;
-                margin: 20px;
-                border-radius: 8px;
-                overflow: hidden;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
-
-            .image > img {
-                width: 100%;
-                display: block;
-                background-color: #1a1a1a;
-            }#steam-wrapper {
-                width: 100%;
-                margin: 0;
-            }
-            
-            #steam {
-                padding: 50px;
-                color: white;
-                text-align: center;
-                background-color: #0c2c5e;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <nav-bar></nav-bar>
-
-        <div id="bluetop"></div>
-
-        <div id="project-background">
+    <!-- Banner -->
+    <div class="page-banner" style="background-image: url('img/chimken/lvl1.PNG'); min-height: 280px;">
+        <div class="page-banner-content">
             <h1>Chimken Crusade</h1>
+            <p class="page-banner-subtitle">Personal Project &bull; Designer &bull; Programmer &bull; Unity</p>
         </div>
+    </div>
 
-        <div id="wrapper1">
-            <div id="project-main">
-                <h2>Chimken Crusade</h2>
-                <p></p>
-                <p>April 2023</p>
-                <p></p>
-                <p>Role: Designer, Programmer, Narrative</p>                <p>Chimken Crusade is an accessible bullet hell game where players are armed with naught but their wits and Chimken the chicken's stubby legs. With the support of an wise old goat, players must escort a golden egg back to Chimken's home without falling prey to the jealous monsters.</p>
-                <p></p>
-                <p>This game was developed in Unity for a class over the course of a semester by myself and a partner. It was originally planned to be a 2D Tactical RPG featuring an autoscrolling camera to incentivize players to make their moves quickly, until we realized we needed to adjust the scope. The project was then successfully pivoted into the game you see here.</p>
-                <p></p>
-                <p><strong>Contributions</strong></p>
-                <p></p>
-                <ul>
-                    <li>Cooperated with a partner to plan, prototype and develop ~20 minute game within the span of 12 weeks</li>
-                    <p></p>
-                    <li>Programmed and prototyped the main autoscrolling camera mechanic</li>
-                    <p></p>
-                    <li>Programmed the player movement, health bar, dialogue system, and 4 different enemy types</li>
-                    <p></p>
-                    <li>Created 4+ levels using Unity's tilemap system</li>
-                    <p></p>                    <li>Wrote all dialogue and tutorials</li>
-                </ul>
+    <!-- Project Overview -->
+    <div class="case-study-wrapper">
+        <div class="case-study-main">
+            <h2>Project Overview</h2>
+            <div class="case-study-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Designer, Programmer,<br>Narrative</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Team Size</span>
+                    <span class="meta-value">2 people</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeframe</span>
+                    <span class="meta-value">April 2023<br>(12 weeks)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Engine</span>
+                    <span class="meta-value">Unity</span>
+                </div>
+            </div>
 
-                
-              </div>
+            <p>
+                Chimken Crusade is an accessible bullet hell where players help Chimken the chicken escort a
+                golden egg home, armed with only stubby legs and the wisdom of an old goat NPC. Players navigate
+                through enemy encounters while managing movement — no weapons, just timing.
+            </p>
+            <p>
+                The game was originally conceived as a 2D Tactical RPG with an autoscrolling camera to pressure
+                players into quick decisions. After scoping down, the project successfully pivoted into the
+                focused bullet-hell you see here — a lesson in disciplined scope management.
+            </p>
+
+            <h2>Design Goals</h2>
+            <p>
+                The core goal was to build a game that felt <strong>complete and polished</strong> within a strict 12-week
+                timeline, working as a team of two. Enemies and levels needed to teach the player new challenges
+                progressively, and the dialogue system had to carry personality without slowing momentum.
+            </p>
+
+            <h2>My Contributions</h2>
+            <ul>
+                <li>Planned, prototyped, and shipped a ~20-minute game with a single partner in 12 weeks</li>
+                <li>Programmed and tuned the core autoscrolling camera mechanic</li>
+                <li>Implemented player movement, health, and a dialogue system from scratch</li>
+                <li>Designed and programmed 4 distinct enemy types</li>
+                <li>Built 4+ levels using Unity's tilemap system</li>
+                <li>Wrote all in-game dialogue and tutorial text</li>
+            </ul>
         </div>
+    </div>
 
-        <div id="steam-wrapper">
-            <div id="steam">
-                <p></p>
-            </div>
-        </div>        <div id="image-wrapper">
-            <div class="image">
-                <img src="img/chimken/lvl3.gif" alt="Chimken Crusade Gameplay">
-            </div>
-            <div class="image">
-                <img src="img/chimken/lvl4.PNG" alt="Dialogue System">
-            </div>
+    <!-- Screenshots -->
+    <div class="image-gallery">
+        <div class="gallery-img">
+            <img src="img/chimken/lvl3.gif" alt="Chimken Crusade gameplay — Level 3">
         </div>
+        <div class="gallery-img">
+            <img src="img/chimken/lvl4.PNG" alt="Chimken Crusade — dialogue system">
+        </div>
+    </div>
 
-        <script src="lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
-    </body>
+    <div id="footer">
+        <p>Copyright &copy; 2026 Jacob Scott &mdash; All images, logos, and names used with permission</p>
+    </div>
+</body>
 </html>
