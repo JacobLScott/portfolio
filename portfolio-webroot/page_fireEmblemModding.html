@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Jacob Scott | Reverse Engineering Fire Emblem</title>
+    <title>Jacob Scott | Fire Emblem Edits and Modifications</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Case study: Reverse Engineering Fire Emblem — Jacob Scott's custom mods across GBA, DS, 3DS, and Switch Fire Emblem titles.">
+    <meta name="description" content="Case study: Fire Emblem Edits and Modifications — Jacob Scott's custom mods across GBA, DS, 3DS, and Switch Fire Emblem titles.">
     <meta name="author" content="Jacob Scott">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,6 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <script src="components/navbar.js" defer></script>
+    <style>
+        .cont {
+            width: min(900px, 90%);
+        }
+    </style>
 </head>
 
 <body>
@@ -102,6 +107,37 @@
         </div>
     </div>
 
+    <div class="cont-section-label">
+        <h2>Highlights</h2>
+    </div>
+
+    <div class="cont-wrapper">
+
+        <div class="cont card-accent">
+            <p class="cont-card-title">Building Custom Skills in Fire Emblem: Engage</p>
+            <a href="img/fe/fellblood.PNG" data-lightbox="fire-emblem-engage" data-title="Custom skills">
+                <img src="img/fe/fellblood.PNG" alt="Custom skills in Fire Emblem: Engage">
+            </a>
+            <h3 class="dropdown-trigger" aria-expanded="false">Placeholder dropdown heading one</h3>
+            <div class="dropdown-content">
+                <p>Placeholder content for the first dropdown card. Replace this with details about a specific mod, system, or design contribution.</p>
+                <video controls style="width: 100%; border-radius: 6px; margin-top: 1rem;">
+                    <source src="img/fe/short.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="cont card-accent">
+            <p class="cont-card-title">Placeholder Title 2</p>
+            <h3 class="dropdown-trigger" aria-expanded="false">Placeholder dropdown heading two</h3>
+            <div class="dropdown-content">
+                <p>Placeholder content for the second dropdown card. Replace this with details about a specific mod, system, or design contribution.</p>
+            </div>
+        </div>
+
+    </div>
+
     <!-- Game Images -->
     <div class="image-gallery">
         <div class="gallery-img">
@@ -126,6 +162,36 @@
         const toggle = document.querySelector('.menu-toggle');
         if (toggle) toggle.addEventListener('click', function () {
             document.getElementById('top-menu').classList.toggle('active');
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.dropdown-trigger').forEach(function (trigger) {
+                trigger.addEventListener('click', function () {
+                    var content = trigger.nextElementSibling;
+                    if (!content) return;
+                    var isOpen = content.classList.contains('open');
+                    if (!isOpen) {
+                        content.classList.add('open');
+                        trigger.classList.add('open');
+                        trigger.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.addEventListener('transitionend', function handler(e) {
+                            if (e.propertyName === 'max-height') {
+                                content.style.maxHeight = null;
+                                content.removeEventListener('transitionend', handler);
+                            }
+                        });
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        void content.offsetHeight;
+                        content.classList.remove('open');
+                        content.style.maxHeight = '0px';
+                        trigger.classList.remove('open');
+                        trigger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
         });
     </script>
 </body>

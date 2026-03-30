@@ -11,9 +11,9 @@ class NavBar extends HTMLElement {
                         <ul class="sub-menu">
                             <li><a href="page_unchained.html">Unchained: Tale of Enra</a></li>
                             <li><a href="page_bugnauts.html">Bugnauts!</a></li>
+                            <li><a href="page_fireEmblemModding.html">Fire Emblem Edits and Modifications</a></li>
                             <li><a href="page_level_design.html">UE5 Level Design</a></li>
                             <li><a href="page_chimken_crusade.html">Chimken Crusade</a></li>
-                            <li><a href="page_fireEmblemModding.html">Reverse Engineering Fire Emblem</a></li>
                             <li><a href="page_rps.html">Rock, Paper, Scissors, Shoot!</a></li>
                         </ul>
                     </li>
