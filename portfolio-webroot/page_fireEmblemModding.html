@@ -84,14 +84,14 @@
             <h3>GBA Titles</h3>
             <ul>
                 <li>Modified mechanics across multiple games to rebalance the player experience</li>
-                <li>Created and implemented new maps and levels across a variety of locations</li>
-                <li>Designed and implemented new playable characters with unique stat spreads</li>
-                <li>Created custom animations to support balance changes and new character additions</li>
+                <li>Created and implemented new maps and levels across a variety of titles</li>
+                <li>Designed and implemented new playable characters with unique stat spreads, encouraging unique playstyles</li>
+                <li>Created custom animations and palettes to support new character additions</li>
             </ul>
 
             <h3>DS Titles</h3>
             <ul>
-                <li>Modified combat and progression mechanics for a different difficulty curve</li>
+                <li>Modified combat and progression mechanics for a different player experience and difficulty curve</li>
             </ul>
 
             <h3>3DS Titles</h3>
@@ -114,25 +114,46 @@
     <div class="cont-wrapper">
 
         <div class="cont card-accent">
-            <p class="cont-card-title">Building Custom Skills in Fire Emblem: Engage</p>
+            <p class="cont-card-title">Building Custom Skills in <i>Fire Emblem: Engage</i></p>
             <a href="img/fe/fellblood.PNG" data-lightbox="fire-emblem-engage" data-title="Custom skills">
-                <img src="img/fe/fellblood.PNG" alt="Custom skills in Fire Emblem: Engage">
+                <img src="img/fe/fellblood_thumbnail.PNG" alt="Custom skills in Fire Emblem: Engage">
             </a>
-            <h3 class="dropdown-trigger" aria-expanded="false">Placeholder dropdown heading one</h3>
+            <h3 class="dropdown-trigger" aria-expanded="false">The first game without a hard-coded skill system</h3>
             <div class="dropdown-content">
-                <p>Placeholder content for the first dropdown card. Replace this with details about a specific mod, system, or design contribution.</p>
+                <p>Even more so than others, this game in particular has incredible potential when it comes to modding. In addition to being built using the Unity engine, the developers created a unique system that allows for easy creation of skills with custom effects. Because much of the player experience in <i>Fire Emblem: Engage</i> is driven by these skills, having the ability to create custom skills opens up a wide range of possibilities to experiment with the gameplay. These skills and their effects are usually hard-coded in other games.</p>
+                <p>By examining skills built using this system, I have learned how to create my own custom skills to experiment with many of the game's other systems. Some of these are showcased below.</p>
+
+                
                 <video controls style="width: 100%; border-radius: 6px; margin-top: 1rem;">
                     <source src="img/fe/short.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <br><br>
+                <p>In the video above we see how the custom skill 'Fell Blood' interacts with another skill present on the character. By engaging with Emblem Chrom, Fogado gains +10 Magic thanks to the 'Other Half' skill. The 'Fell Blood' skill sees the change in Fogado's magic stat and applies the proper effect with these new stats in mind.</p>
+                <p>Fogado's damage on the enemy went from 32 damage per attack, to 36.</p>
+                <p></p>
+                <p>Even though skills can be made with a simple text editor, this custom skill was relatively simple to implement compared to some of the others present in the game. It's actually made up of two different 'skills'. The top snippet simply acts as a container to place the effect into which is the bottom snippet. The bottom snippet is then considered 'invisible' so that it doesn't appear twice in battle.</p>
+                <img src="img/fe/fellbloodsnippet.PNG" alt="Fell blood code">
+                <p>Most of the fields in both skills here are left blank as they aren't needed. The exciting part is in the bottom snippet, where we can see the formula that is applied to affect damage. The skill description matches what happens in the ActValues field. It looks for the highest of the Strength or Magic stat and then adds 0.25 times the lower of the unit's Strength or Magic. This value that is calculated is then applied into the ActNames field. In this case 'ユニット攻撃力' translates to 'Unit Attack Power'.</p>
+                <hr>
+
             </div>
         </div>
 
         <div class="cont card-accent">
-            <p class="cont-card-title">Placeholder Title 2</p>
-            <h3 class="dropdown-trigger" aria-expanded="false">Placeholder dropdown heading two</h3>
+            <p class="cont-card-title">Bringing weaker Emblems up to par</p>
+            <a href="img/fe/fellblood.PNG" data-lightbox="fire-emblem-engage" data-title="Custom skills">
+                <img src="img/fe/savageblow.PNG" alt="Custom skills in Fire Emblem: Engage">
+            </a>
+            <h3 class="dropdown-trigger" aria-expanded="false">Adding unused Skills to create unique interactions</h3>
             <div class="dropdown-content">
-                <p>Placeholder content for the second dropdown card. Replace this with details about a specific mod, system, or design contribution.</p>
+                <p>In my attempts to improve some of the weaker effects in this game, I discovered a very strong interaction between a method of attacking and a skill which went unused by the developers. I was definitely successful in strengthening the Emblem.</p>
+
+                <video controls style="width: 100%; border-radius: 6px; margin-top: 1rem;">
+                    <source src="img/fe/savageblow.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>The 'Savage Blow' skill was present in the code (but was unobtainable for player characters) and was a staple in <i>Fire Emblem: Fates</i> and I figured that putting it on an Emblem character from that game would be fitting. What I did not realize was how it would trigger multiple times for each enemy the character targets with the Emblem's AOE attack.</p>
             </div>
         </div>
 
