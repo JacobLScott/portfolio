@@ -18,6 +18,12 @@ class NavBar extends HTMLElement {
                         </ul>
                     </li>
                     <li><a href="page_resume.html">Resume</a></li>
+                    <li><a href="#">Design Docs</a>
+                        <ul class="sub-menu">
+                            <li><a href="page_unchained_designdocuments.html">Unchained: Tale of Enra</a></li>
+                            <li><a href="page_bugnauts_designdocuments.html">Bugnauts!</a></li>
+                        </ul>
+                    </li>
                     <li><a href="page_about.html">About</a></li>
                     <li><a href="page_contact.html">Contact</a></li>
                 </ul>
