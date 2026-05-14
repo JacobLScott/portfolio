@@ -766,7 +766,7 @@ ul {
 
 .dropdown-content.open {
     opacity: 1;
-    max-height: 3000px;
+    max-height: 10000px;
     padding: 1rem 1rem 2rem;
 }
 
